@@ -1,11 +1,50 @@
+.catalog {
+  padding: 20px 20px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px 0 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 82px 110px 0;
+  }
+}
+
 .catalog__list {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
 .catalog__item {
+  box-sizing: border-box;
+  min-height: 266px;
+  padding: 30px 33px 18px 20px;
   background-color: @bg-color-main;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    min-height: 372px;
+    padding: 70px 316px 53px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    min-height: 374px;
+    padding: 77px 61px 55px 52px;
+  }
 }
 
 .catalog__title {
@@ -13,18 +52,85 @@
   font-size: 24px;
   line-height: 37px;
   margin: 0;
+  padding: 0 0 29px 71px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 0 24px 1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 73px 162px;
+  }
 }
 
 .catalog__description {
   margin: 0;
+  padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 23px;
+  }
 }
 
 .catalog__button {
   .font-submain;
   font-size: 16px;
   line-height: 16px;
-
   text-transform: uppercase;
   text-decoration: none;
+
+  display: block;
+  position: relative;
+  width: 139px;
+  padding: 4px 0;
+
   color: @text-color_main;
+
+  @media (min-width: @tablet-width) {
+    width: 165px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.catalog__button::before {
+  content: "";
+  display: block;
+  position: absolute;
+
+  width: 18px;
+  height: 2px;
+  top: 11px;
+  left: 102px;
+  background-color: @bg-color-arrow;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: 133px;
+  }
+}
+
+.catalog__button::after {
+  content: "";
+  display: block;
+  position: absolute;
+
+  top: 8px;
+  left: 119px;
+  border-style: solid;
+  border-width: 4.5px 0 4.5px 6px;
+  border-color: transparent transparent transparent @bg-color-arrow;
+
+  @media (min-width: @tablet-width) {
+    top: 15px;
+    left: 150px;
+  }
 }
