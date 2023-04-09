@@ -1,5 +1,6 @@
 .stats__list {
   margin: 0;
+  padding-bottom: 20px;
 }
 
 .stats__description {
@@ -12,6 +13,22 @@
   font-size: 24px;
   line-height: 24px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.stats__description {
+  font-size: 12px;
+  line-height: 12px;
+  color: @text-color-submain;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .expenses__text,
