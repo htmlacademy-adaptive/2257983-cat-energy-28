@@ -1,13 +1,51 @@
+.adress {
+  padding: 26px 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 70px 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    width: 565px;
+    height: 198px;
+    padding: 56px 60px 56px 80px;
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    background-color: @button-text-color;
+  }
+}
+
 .adress__call {
   .font-submain;
+  width: 139px;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .adress__text {
+  width: 139px;
   line-height: 20px;
   margin: 0;
   color: @text-color-submain;
+
+  @media (min-width: @tablet-width) {
+    width: 160px;
+    font-size: 16px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }
