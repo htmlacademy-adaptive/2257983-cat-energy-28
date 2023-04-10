@@ -1,6 +1,30 @@
 .social__list {
   padding: 0;
   margin: 0;
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+
+.social__list::before,
+.social__list::after {
+  content: "";
+  display: block;
+  position: absolute;
+
+  width: 281px;
+  height: 1px;
+  top: -20px;
+  left: -74px;
+  background-color: @social-line;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.social__list::after {
+  top: 42px;
 }
 
 .social__item {
@@ -13,7 +37,6 @@
   display: block;
   width: 28px;
   height: 22px;
-
   background-image: url("../img/social/vk.svg");
   background-size: 28px 17px;
   background-repeat: no-repeat;
@@ -25,7 +48,6 @@
   display: block;
   width: 28px;
   height: 22px;
-
   background-image: url("../img/social/youtube.svg");
   background-size: 28px 17px;
   background-repeat: no-repeat;
@@ -37,7 +59,6 @@
   display: block;
   width: 28px;
   height: 22px;
-
   background-image: url("../img/social/telegram.svg");
   background-size: 28px 17px;
   background-repeat: no-repeat;

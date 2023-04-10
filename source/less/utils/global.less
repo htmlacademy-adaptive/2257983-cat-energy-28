@@ -25,14 +25,19 @@
   font-display: swap;
 }
 
+@tablet-width: 769px;
+@desktop-width: 1440px;
+
 .page__body {
   .font-main;
   font-size: 14px;
   line-height: 18px;
-
   margin: 0 auto;
   height: 100%;
-  width: 320px;
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
 
 .visually-hidden {

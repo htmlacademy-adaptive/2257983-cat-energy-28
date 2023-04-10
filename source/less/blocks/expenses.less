@@ -1,0 +1,22 @@
+.expenses {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 9px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 63px;
+  }
+}
+
+.expenses__text,
+.expenses__price {
+  .font-submain;
+  line-height: 20px;
+  text-transform: uppercase;
+}

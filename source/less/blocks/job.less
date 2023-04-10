@@ -1,12 +1,96 @@
+.job {
+  padding: 20px 21px 49px;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 105px 0 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 71px 106px 0 110px;
+  }
+}
+
 .job__title {
   .font-submain;
   font-size: 36px;
   line-height: 40px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .job__list {
-  padding: 0;
+  padding: 40px 0 0 0;
   margin: 0;
   list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 37px;
+    padding: 32px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 32px 0 0 0;
+  }
+}
+
+.job__item {
+  box-sizing: border-box;
+  min-height: 60px;
+  padding-left: calc(60px + 20px);
+  position: relative;
+  color: @text-color-submain;
+
+  @media (min-width: @tablet-width) {
+    height: 280px;
+    padding: 0;
+    padding-top: 151px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .job__step-one {
+    width: 230px;
+  }
+
+  .job__step-two {
+    width: 246px;
+  }
+
+  .job__step-three {
+    width: 248px;
+  }
+
+  .job__step-four {
+    width: 250px;
+  }
+}
+
+.job__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+
+  width: 60px;
+  height: 60px;
+  left: 0;
+  top: 0;
+  background-color: @bg-job-color;
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+    top: 40px;
+  }
 }

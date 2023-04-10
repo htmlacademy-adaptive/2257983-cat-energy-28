@@ -1,7 +1,25 @@
-.copiright__link {
+.copyright {
+  width: 281px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 168px;
+  }
+}
+
+.copyright__link {
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
-
   color: @text-color-submain;
+
+  @media (min-width: @tablet-width) {
+    padding: 9px 0;
+  }
+}
+
+.copyright__link-logo {
+  display: contents;
 }

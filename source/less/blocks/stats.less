@@ -1,25 +1,38 @@
 .stats__list {
   margin: 0;
+  padding-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 55px;
+  }
 }
 
 .stats__description {
   font-size: 12px;
-
+  line-height: 12px;
   color: @text-color-submain;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .stats__number {
   .font-submain;
   font-size: 24px;
   line-height: 24px;
-
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .expenses__text,
 .expenses__price {
   .font-submain;
   line-height: 20px;
-
   text-transform: uppercase;
 }
