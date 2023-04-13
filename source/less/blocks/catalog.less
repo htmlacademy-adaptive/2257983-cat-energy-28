@@ -33,6 +33,7 @@
   min-height: 266px;
   padding: 30px 33px 18px 20px;
   background-color: @bg-color-main;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     min-height: 372px;
@@ -43,6 +44,33 @@
     width: 570px;
     min-height: 374px;
     padding: 77px 61px 55px 52px;
+  }
+}
+
+.catalog__item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  top: 24px;
+  left: 22px;
+  background-color: @catalog-circle-bg;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
+    top: 92px;
+    left: auto;
+    right: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+    top: 47px;
+    left: 52px;
   }
 }
 
