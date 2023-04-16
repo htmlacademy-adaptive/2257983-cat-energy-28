@@ -1,0 +1,57 @@
+.gift {
+  width: 279px;
+  margin: 35px auto 0;
+  background-image: url("../../img/catalog/gift-cat.jpg");
+
+  @media (min-width: @tablet-width) {
+    width: 707px;
+    margin: 69px auto 0x;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+    margin: 0;
+  }
+}
+
+.gift-text {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+
+  width: 161px;
+  margin: 0;
+  padding: 186px 61px 43px 57px;
+  color: @gift-text-color;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 71px 124px 69px 422px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 184px 43px 42px 41px;
+  }
+}
+
+.gift-text::before {
+  content: "";
+  position: absolute;
+  top: 59px;
+  left: calc(50% - 1/2*78px);
+
+  width: 78px;
+  height: 80px;
+  background-image: url("../../img/catalog/gift-icon.svg");
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+    left: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 56px;
+    left: 84px;
+  }
+}
