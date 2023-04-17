@@ -22,3 +22,34 @@
   font-style: @font-style-submain;
   font-weight: @font-weight-submain;
 }
+
+.job-box() {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 0;
+  top: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: @bg-job-color;
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+    top: 40px;
+  }
+}
+
+.job-number() {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 280px;
+  line-height: 280px;
+
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  color: #f2f2f2;
+}

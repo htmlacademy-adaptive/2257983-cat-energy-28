@@ -78,19 +78,50 @@
   }
 }
 
-.job__item::before {
-  content: "";
-  display: block;
-  position: absolute;
+.job__step-one::before {
+  .job-box();
+  background-image: url("../../img/index/job-sheet.svg");
+}
 
-  width: 60px;
-  height: 60px;
-  left: 0;
-  top: 0;
-  background-color: @bg-job-color;
+.job__step-two::before {
+  .job-box();
+  background-image: url("../../img/index/job-powder.svg");
+}
 
+.job__step-three::before {
+  .job-box();
+  background-image: url("../../img/index/job-eat.svg");
+}
+
+.job__step-four::before {
+  .job-box();
+  background-image: url("../../img/index/job-watch.svg");
+}
+
+.job__step-one::after {
   @media (min-width: @tablet-width) {
-    left: 0;
-    top: 40px;
+    .job-number();
+    content: "1";
+  }
+}
+
+.job__step-two::after {
+  @media (min-width: @tablet-width) {
+    .job-number();
+    content: "2";
+  }
+}
+
+.job__step-three::after {
+  @media (min-width: @tablet-width) {
+    .job-number();
+    content: "3";
+  }
+}
+
+.job__step-four::after {
+  @media (min-width: @tablet-width) {
+    .job-number();
+    content: "4";
   }
 }
