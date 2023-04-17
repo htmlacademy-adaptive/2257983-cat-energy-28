@@ -45,22 +45,21 @@
 
           <div class="cat-info">
             <div class="cat-info__wrapper">
-              <label class="cat-info__label" for="cat-info__cat-name">Имя:*</label>
+              <label class="cat-info__label" for="cat-name">Имя:*</label>
               <input class="cat-info__input" placeholder="Барсик" type="text" name="cat-name" id="cat-name" minlength="3" pattern="[А-Яа-яЁё ]+" required >
             </div>
             <div class="cat-info__wrapper">
-              <label class="cat-info__label" for="cat-info__cat-weight">Вес (кг):*</label>
-              <input class="cat-info__input" placeholder="7" type="number" name="cat-weight" id="cat-weight" maxlength="2" required>
+              <label class="cat-info__label" for="cat-weight">Вес (кг):*</label>
+              <input class="cat-info__input" placeholder="7" type="number" name="cat-weight" id="cat-weight" required>
             </div>
             <div class="cat-info__wrapper">
-              <label class="cat-info__label" for="cat-info__cat-age">Возраст (лет):</label>
-              <input class="cat-info__input" placeholder="7" type="number" name="cat-age" id="cat-age" maxlength="2" required>
+              <label class="cat-info__label" for="cat-age">Возраст (лет):</label>
+              <input class="cat-info__input" placeholder="7" type="number" name="cat-age" id="cat-age">
             </div>
           </div>
 
           <fieldset class="target">
             <legend class="visually-hidden">Цель программы</legend>
-
             <ul class="target__list">
               <li class="target__item">
                 <label class="target__label" for="lose-weight">
@@ -85,13 +84,24 @@
                   Не знаю (Нужен ваш совет)
                 </label>
               </li>
-
-
-
-
-
             </ul>
           </fieldset>
+
+          <section class="cat-owner">
+            <h2 class="cat-owner__title">Контактные данные (владельца кота)</h2>
+            <div class="cat-owner__wrapper">
+              <div class="cat-owner__container">
+                <label class="cat-owner__label" for="email">E-mail:*</label>
+                <input class="cat-owner__input cat-owner__email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </div>
+              <div class="cat-owner__container">
+                <label class="cat-owner__label" for="tel">Телефон:*</label>
+                <input class="cat-owner__input cat-owner__tel" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" minlength="11" required>
+              </div>
+            </div>
+          </section>
+
+
 
 
 
