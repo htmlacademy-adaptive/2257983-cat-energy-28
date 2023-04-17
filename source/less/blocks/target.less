@@ -1,0 +1,60 @@
+.target {
+  padding: 22px 20px 19px;
+  margin: 0;
+  border: none;
+  border-top: 1px solid @form-border-fielset-color;
+  border-bottom: 1px solid @form-border-fielset-color;
+}
+
+.target__list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.target__label {
+  .font-submain;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  height: 30px;
+  padding-left: 45px;
+  color: @form-text-fieldset-color;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.target__input-mark {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @radio-border-color;
+  border-radius: 50%;
+}
+
+.target__input[type="radio"]:checked + .target__input-mark::after {
+  content: "";
+  position: absolute;
+  top: 7.5px;
+  left: 8px;
+
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: @radio-checked-color;
+}
+
+
+

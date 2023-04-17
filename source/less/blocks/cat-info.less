@@ -1,0 +1,50 @@
+.cat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 20px 24px;
+}
+
+.cat-info__wrapper {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.cat-info__label {
+  .font-submain;
+  font-size: 16px;
+  line-height: 18px;
+
+  text-transform: uppercase;
+  color: @form-text-color;
+}
+
+.cat-info__input {
+  .font-submain;
+  font-size: 16px;
+  line-height: 16px;
+  color: @form-text-color;
+  text-transform: uppercase;
+
+  flex-grow: 1;
+  box-sizing: border-box;
+  height: 45px;
+  padding: 8px 20px;
+  padding-top: 6px;
+  margin: 0;
+  border: 1px solid @form-border-color;
+}
+
+.cat-info__input::placeholder {
+  .font-submain;
+  font-size: 16px;
+  line-height: 16px;
+
+  color: @form-text-color;
+  text-transform: uppercase;
+}
+
+
+
+
