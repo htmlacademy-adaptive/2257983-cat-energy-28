@@ -1,0 +1,82 @@
+.additional {
+  padding: 0 20px 34px;
+}
+
+.additional__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.additional__legend {
+  padding: 0;
+}
+
+.additional__title {
+  .font-submain;
+  font-size: 24px;
+  line-height: 26px;
+
+  margin: 0;
+  padding: 0 0 34px 0;
+  position: relative;
+}
+
+.additional__title::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 164px;
+
+  width: 136px;
+  height: 2px;
+  background-color: @form-title-line-color;
+}
+
+.additional__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.additional__item {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.additional__label {
+  .font-submain;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  padding-left: 46px;
+}
+
+/*Checkbox*/
+.control-mark-check {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+  border: 1px solid @checkbox-border-color;
+}
+
+.additional__input[type="checkbox"]:checked + .control-mark-check::after {
+  content: url("../../img/form/check.svg");
+  position: absolute;
+  top: 7px;
+  left: 6px;
+
+  width: 18px;
+  height: 14px;
+}
