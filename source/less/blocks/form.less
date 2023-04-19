@@ -1,3 +1,11 @@
+.form__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    gap: 80px;
+    padding: 0 112px 69px 111px;
+  }
+}
+
 .form__button {
   .font-submain;
   font-size: 16px;
@@ -16,6 +24,11 @@
     width: 282px;
     height: 52px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 84px 82px 111px;
+    width: 568px;
+  }
 }
 
 .form__required {
@@ -27,5 +40,6 @@
 
   @media (min-width: @tablet-width) {
     display: inline-flex;
+    padding: 0;
   }
 }

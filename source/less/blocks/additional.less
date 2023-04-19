@@ -4,6 +4,10 @@
   @media (min-width: @tablet-width) {
     padding: 0 70px 54px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px 61px;
+  }
 }
 
 .additional__fieldset {
@@ -59,10 +63,15 @@
   gap: 13px;
 
   @media (min-width: @tablet-width) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      row-gap: 32px;
-      column-gap: 55px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    row-gap: 30px;
+    column-gap: 80px;
   }
 }
 
@@ -75,6 +84,10 @@
   @media (min-width: @tablet-width) {
     min-width: 287px;
     height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 245px;
   }
 }
 

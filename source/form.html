@@ -43,49 +43,51 @@
 
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
-          <div class="cat-info">
-            <div class="cat-info__wrapper">
-              <label class="cat-info__label" for="cat-name">Имя:*</label>
-              <input class="cat-info__input" placeholder="Барсик" type="text" name="cat-name" id="cat-name" minlength="3" pattern="[А-Яа-яЁё ]+" required >
+          <div class="form__wrapper">
+            <div class="cat-info">
+              <div class="cat-info__wrapper">
+                <label class="cat-info__label" for="cat-name">Имя:*</label>
+                <input class="cat-info__input" placeholder="Барсик" type="text" name="cat-name" id="cat-name" minlength="3" pattern="[А-Яа-яЁё ]+" required >
+              </div>
+              <div class="cat-info__wrapper">
+                <label class="cat-info__label" for="cat-weight">Вес (кг):*</label>
+                <input class="cat-info__input" placeholder="7" type="number" name="cat-weight" id="cat-weight" required>
+              </div>
+              <div class="cat-info__wrapper">
+                <label class="cat-info__label" for="cat-age">Возраст (лет):</label>
+                <input class="cat-info__input" placeholder="7" type="number" name="cat-age" id="cat-age">
+              </div>
             </div>
-            <div class="cat-info__wrapper">
-              <label class="cat-info__label" for="cat-weight">Вес (кг):*</label>
-              <input class="cat-info__input" placeholder="7" type="number" name="cat-weight" id="cat-weight" required>
-            </div>
-            <div class="cat-info__wrapper">
-              <label class="cat-info__label" for="cat-age">Возраст (лет):</label>
-              <input class="cat-info__input" placeholder="7" type="number" name="cat-age" id="cat-age">
-            </div>
+
+            <fieldset class="target">
+              <legend class="visually-hidden">Цель программы</legend>
+              <ul class="target__list">
+                <li class="target__item">
+                  <label class="target__label" for="lose-weight">
+                    <input class="visually-hidden target__input" type="radio" id="lose-weight" name="target" value="lose-weight" checked>
+                    <span class="target__input-mark"></span>
+                    Похудение
+                  </label>
+                </li>
+
+                <li class="target__item">
+                  <label class="target__label" for="weight-gain">
+                    <input class="visually-hidden target__input" type="radio" id="weight-gain" name="target" value="weight-gain">
+                    <span class="target__input-mark"></span>
+                    Набор массы
+                  </label>
+                </li>
+
+                <li class="target__item">
+                  <label class="target__label" for="help">
+                    <input class="visually-hidden target__input" type="radio" id="help" name="target" value="help">
+                    <span class="target__input-mark"></span>
+                    Не знаю (Нужен ваш совет)
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
           </div>
-
-          <fieldset class="target">
-            <legend class="visually-hidden">Цель программы</legend>
-            <ul class="target__list">
-              <li class="target__item">
-                <label class="target__label" for="lose-weight">
-                  <input class="visually-hidden target__input" type="radio" id="lose-weight" name="target" value="lose-weight" checked>
-                  <span class="target__input-mark"></span>
-                  Похудение
-                </label>
-              </li>
-
-              <li class="target__item">
-                <label class="target__label" for="weight-gain">
-                  <input class="visually-hidden target__input" type="radio" id="weight-gain" name="target" value="weight-gain">
-                  <span class="target__input-mark"></span>
-                  Набор массы
-                </label>
-              </li>
-
-              <li class="target__item">
-                <label class="target__label" for="help">
-                  <input class="visually-hidden target__input" type="radio" id="help" name="target" value="help">
-                  <span class="target__input-mark"></span>
-                  Не знаю (Нужен ваш совет)
-                </label>
-              </li>
-            </ul>
-          </fieldset>
 
           <section class="cat-owner">
             <h2 class="cat-owner__title">Контактные данные (владельца кота)</h2>
@@ -144,7 +146,7 @@
             </fieldset>
           </section>
 
-          <button class="form__button" type="submit">отправить</button>
+          <button class="form__button" type="submit">Отправить заявку</button>
           <p class="form__required">* — Обязательные поля</p>
         </form>
 
