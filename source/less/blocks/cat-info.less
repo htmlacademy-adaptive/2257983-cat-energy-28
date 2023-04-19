@@ -3,6 +3,11 @@
   flex-direction: column;
   gap: 14px;
   padding: 0 20px 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 67px 72px 71px;
+    gap: 20px;
+  }
 }
 
 .cat-info__wrapper {
@@ -14,10 +19,15 @@
 .cat-info__label {
   .font-submain;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 16px;
 
   text-transform: uppercase;
   color: @form-text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .cat-info__input {
@@ -33,6 +43,13 @@
   padding: 0 20px;
   margin: 0;
   border: 1px solid @form-border-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    height: 52px;
+  }
 }
 
 .cat-info__input::placeholder {
@@ -42,6 +59,16 @@
 
   color: @form-text-color;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.cat-info__input::-webkit-outer-spin-button,
+.cat-info__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 

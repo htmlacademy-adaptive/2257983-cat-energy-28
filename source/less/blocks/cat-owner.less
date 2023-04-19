@@ -1,5 +1,9 @@
 .cat-owner {
-  padding: 26px 20px 23px ;
+  padding: 26px 20px 23px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 66px 65px 69px;
+  }
 }
 
 .cat-owner__title {
@@ -11,6 +15,14 @@
   margin: 0;
   padding-bottom: 35px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+
+    width: fit-content;
+    padding-bottom: 76px;
+  }
 }
 
 .cat-owner__title::after {
@@ -22,18 +34,31 @@
   width: 99px;
   height: 2px;
   background-color: @form-title-line-color;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    left: 554px;
+  }
 }
 
 .cat-owner__wrapper {
   display: flex;
   flex-direction: column;
   gap: 14px;
+
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
 }
 
 .cat-owner__container {
   display: flex;
   align-items: center;
   gap: 10px;
+
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
 }
 
 .cat-owner__label {
@@ -43,6 +68,11 @@
 
   text-transform: uppercase;
   color: @form-text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .cat-owner__input {
@@ -58,6 +88,14 @@
   padding: 0 37px 0 15px;
   margin: 0;
   border: 1px solid @form-border-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    height: 52px;
+    padding: 0 55px 0 20px;
+  }
 }
 
 .cat-owner__input::placeholder {
@@ -67,13 +105,22 @@
 
   color: @form-text-color;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .cat-owner__email {
-background-image: url("../../img/form/email.svg");
-background-repeat: no-repeat;
-background-size: 18px 14px;
-background-position: right 15px top 15px;
+  background-image: url("../../img/form/email.svg");
+  background-repeat: no-repeat;
+  background-size: 17px 13px;
+  background-position: right 15px top 15px;
+
+  @media (min-width: @tablet-width) {
+    background-position: right 19px top 19px;
+  }
 }
 
 .cat-owner__tel {
@@ -81,4 +128,8 @@ background-position: right 15px top 15px;
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: right 16px top 15px;
+
+  @media (min-width: @tablet-width) {
+    background-position: right 19px top 18px;
+  }
 }

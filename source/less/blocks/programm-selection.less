@@ -1,5 +1,9 @@
 .programm-selection {
   border-top: 1px solid @header-line-color;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .programm-selection__title {
@@ -9,6 +13,12 @@
 
   margin: 0;
   padding: 27px 0 37px 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding: 64px 0 54px 69px;
+  }
 }
 
 .programm-selection__text {
@@ -16,7 +26,16 @@
   font-size: 14px;
   line-height: 18px;
 
+  width: 226px;
   margin: 0;
-  padding: 0 54px 39px 20px;
+  padding: 0 0 39px 20px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    width: 323px;
+    padding: 0 0 66px 70px;
+  }
 }
