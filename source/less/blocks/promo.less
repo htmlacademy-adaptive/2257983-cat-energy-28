@@ -2,12 +2,17 @@
   padding: 27px 20px 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
-  content: "";
-  background-image: url("/img/index/cat-bg.jpg");
-  background-size: 769px auto;
+  background-image: url("../../img/index/cat-bg-mobile.jpg");
+  background-size: 320px auto;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/index/cat-bg-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 64px 30px 0;
@@ -17,7 +22,12 @@
 
   @media (min-width: @desktop-width) {
     min-height: 584px;
-    padding: 0 110px;
+    padding: 110px 110px 0;
+    align-items: flex-start;
+
+    background-image: url("../../img/index/cat-bg-desktop.jpg");
+    background-size: contain;
+    background-position: right;
   }
 }
 
@@ -33,8 +43,9 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    align-self: flex-start;
     text-align: start;
-    padding-left: calc(118px - 20px);
+    padding-left: calc(118px - 30px);
     color: @text-color_main;
   }
 
@@ -56,8 +67,9 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    align-self: flex-start;
     text-align: start;
-    padding-left: calc(120px - 20px);
+    padding-left: calc(118px - 30px);
     padding-bottom: 20px;
     color: @text-color_main;
   }
@@ -78,6 +90,7 @@
   padding-bottom: 3px;
 
   @media (min-width: @tablet-width) {
+    padding: 0;
     width: 709px;
     height: 609px;
   }
@@ -85,9 +98,8 @@
   @media (min-width: @desktop-width) {
     width: 552px;
     height: 499px;
-    padding: 0;
     position: absolute;
-    top: 32px;
+    top: 144px;
     right: 330px;
   }
 }

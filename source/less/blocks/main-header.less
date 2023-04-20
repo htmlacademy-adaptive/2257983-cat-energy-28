@@ -13,6 +13,14 @@
   }
 }
 
+.main-header-index {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 1220px;
+    z-index: 1;
+  }
+}
+
 .main-header__logo-link,
 .main-header__logo-link-text {
   display: contents;
@@ -110,18 +118,37 @@
   text-decoration: none;
   text-align: center;
   color: @text-color_main;
-  background-color: @text-bg-color;
+  background-color: @button-text-color;
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+    background-color: inherit;
   }
 
   @media (min-width: @desktop-width) {
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.main-header__link-index {
+  @media (min-width: @desktop-width) {
+    color: @button-text-color;
+  }
+}
+
+.main-header__link-index--active {
+  @media (min-width: @tablet-width) {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: @button-bg-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-decoration-color: @button-text-color;
   }
 }
 
