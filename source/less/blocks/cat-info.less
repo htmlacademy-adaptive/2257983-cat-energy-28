@@ -1,0 +1,80 @@
+.cat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 20px 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 67px 72px 71px;
+    gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.cat-info__wrapper {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
+}
+
+.cat-info__label {
+  .font-submain;
+  font-size: 16px;
+  line-height: 16px;
+
+  text-transform: uppercase;
+  color: @form-text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.cat-info__input {
+  .font-submain;
+  font-size: 16px;
+  line-height: 16px;
+  color: @form-text-color;
+  text-transform: uppercase;
+
+  flex-grow: 1;
+  box-sizing: border-box;
+  height: 45px;
+  padding: 0 20px;
+  margin: 0;
+  border: 1px solid @form-border-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    height: 52px;
+  }
+}
+
+.cat-info__input::placeholder {
+  .font-submain;
+  font-size: 16px;
+  line-height: 16px;
+
+  color: @form-text-color;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.cat-info__input::-webkit-outer-spin-button,
+.cat-info__input::-webkit-inner-spin-button {
+  appearance: none;
+}

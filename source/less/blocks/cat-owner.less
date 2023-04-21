@@ -1,0 +1,148 @@
+.cat-owner {
+  padding: 26px 20px 23px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 66px 65px 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px 67px 110px;
+  }
+}
+
+.cat-owner__title {
+  .font-submain;
+  font-size: 24px;
+  line-height: 26px;
+
+  width: 187px;
+  margin: 0;
+  padding-bottom: 35px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+
+    width: 514px;
+    padding-bottom: 76px;
+  }
+}
+
+.cat-owner__title::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 201px;
+
+  width: 99px;
+  height: 2px;
+  background-color: @form-title-line-color;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    left: 554px;
+  }
+}
+
+.cat-owner__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 78px;
+  }
+}
+
+.cat-owner__container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
+}
+
+.cat-owner__label {
+  .font-submain;
+  font-size: 16px;
+  line-height: 18px;
+
+  text-transform: uppercase;
+  color: @form-text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.cat-owner__input {
+  .font-submain;
+  font-size: 16px;
+  line-height: 18px;
+  color: @form-text-color;
+  text-transform: uppercase;
+
+  flex-grow: 1;
+  box-sizing: border-box;
+  height: 45px;
+  padding: 0 37px 0 15px;
+  margin: 0;
+  border: 1px solid @form-border-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    height: 52px;
+    padding: 0 55px 0 20px;
+  }
+}
+
+.cat-owner__input::placeholder {
+  .font-submain;
+  font-size: 16px;
+  line-height: 16px;
+
+  color: @form-text-color;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.cat-owner__email {
+  background-image: url("../../img/form/email.svg");
+  background-repeat: no-repeat;
+  background-size: 17px 13px;
+  background-position: right 15px top 15px;
+
+  @media (min-width: @tablet-width) {
+    background-position: right 19px top 19px;
+  }
+}
+
+.cat-owner__tel {
+  background-image: url("../../img/form/phone.svg");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: right 16px top 15px;
+
+  @media (min-width: @tablet-width) {
+    background-position: right 19px top 18px;
+  }
+}

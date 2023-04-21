@@ -5,14 +5,11 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width, initiale-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="img/favicon/152.png">
-    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
-  <body class="page__body page__body-index">
+  <body class="page__body">
 
-    <header class="main-header main-header-index main-header--nojs">
+    <header class="main-header main-header--nojs">
       <a class="main-header__logo-link" href="#">
         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="38" fill="none" viewBox="0 0 34 38"><g clip-path="url(#a)"><path fill="#FDC305" d="M6.07 20.72v-2.26c6.68-.92 13.42-1.36 20.17-1.33 0 .6 0 1.21-.06 1.82a25.52 25.52 0 0 1 6-1.82A16.67 16.67 0 0 0 .19 20.39l5.88.33ZM27.24 24.23c-1.16 1.28-1.39 1.2-1.39 3.45v9.18A16.64 16.64 0 0 0 33.32 23a17.3 17.3 0 0 0-.32-3.1 33.1 33.1 0 0 0-5.76 4.33ZM6.36 25.72s-3.79-1.44-5.19-1.83A8.54 8.54 0 0 0 0 23.61a16.65 16.65 0 0 0 8.68 14L6.36 25.72Z"/><path fill="#F06351" d="M26.29 17.12A89.8 89.8 0 0 0 24.89.65S24.75-.64 24 .41c-.59 1.25-1 2.58-1.2 3.94a70.34 70.34 0 0 0-12.77.34C9.24 2 7.85.75 7.18 1c-.67.25-.72 3.31-.72 3.31l-.33 14.1c6.68-.9 13.42-1.34 20.16-1.29Z"/><path fill="#000" d="M12.41 14c0-.09 1 .68 1.41.92.41.24.61.42.61.59 0 .17-.27.34-.63.34s-.91-.12-1-.27h1.23A8.34 8.34 0 0 1 12.41 14ZM19.89 14.11l-1.09 1.33c0 .06-.17.35.18.3.41-.06.82-.16 1.22-.29.11 0 .07-.19-.11-.17-.18.02-.69.05-1 .11l.84-1.26s.07-.13-.04-.02ZM16.75 20.2c.46-.2.85-.56 1.09-1 .28-.65 0-.91-.44-1-.6-.11-1.22.01-1.74.34-.39.36-.34.72-.05 1 .35.27.73.49 1.14.66Z"/><path fill="#F06351" d="M16.35 21.45c-.11.23-.27.43-.46.6-.28.23-.63.36-1 .38a2.15 2.15 0 0 1-1.47-.43 2.3 2.3 0 0 1-.53-.44c-.1-.11-.22-.2-.36-.26 0 0 .75 4.1 2.57 4.75 1.82.65 2.14-.75 2.2-1.13a5.61 5.61 0 0 0-.82-3.23c-.02-.31-.03-.11-.13-.24Z"/><path fill="#000" d="M14.71 22.59a3.44 3.44 0 0 1-2.36-1.47.14.14 0 0 1 .03-.15.14.14 0 0 1 .2 0c.5.7 1.26 1.16 2.11 1.3a2.1 2.1 0 0 0 1.63-1l.14-.19.1.21s.37.76 1 .8c.63.04 1.05-.41 1.61-1.28a.14.14 0 0 1 .2 0 .15.15 0 0 1 .05.2c-.64 1-1.27 1.44-1.88 1.4a1.55 1.55 0 0 1-1.12-.76 2.26 2.26 0 0 1-1.71.94Z"/><path fill="#F06351" d="M26.24 18.92a58.63 58.63 0 0 0-5.07 5.19A31.63 31.63 0 0 1 15.88 29c-.22-.53-1.62-1.51-1.62-1.51s-3.13-2.14-5.18-3.82a34.14 34.14 0 0 1-3.13-3l-2-.11c2.89 4.2 7.12 7.3 12 8.8.86-.14 3.27-1.86 5.07-3.26a58.13 58.13 0 0 0 5.94-5.89c.5-.59.89-1.27 1.14-2-1.1.39-1.86.71-1.86.71Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h33.32v37.61H0z"/></clipPath></defs></svg>
       </a>
@@ -27,101 +24,138 @@
         </button>
         <ul class="main-header__list">
           <li class="main-header__item">
-            <a class="main-header__link main-header__link-index main-header__link-index--active" href="#">Главная</a>
+            <a class="main-header__link" href="index.html">Главная</a>
           </li>
           <li class="main-header__item">
-            <a class="main-header__link main-header__link-index" href="catalog.html">Каталог продукции</a>
+            <a class="main-header__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-header__item">
-            <a class="main-header__link main-header__link-index" href="form.html">Подбор программы</a>
+            <a class="main-header__link  main-header__link--active" href="#">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="main-container">
+      <section class="programm-selection">
+        <h2 class="programm-selection__title">Подбор программы</h2>
+        <p class="programm-selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
-      <section class="promo">
-        <h1 class="promo__title">Функциональное <br> питание для котов</h1>
-        <p class="promo__description">Занялся собой? Займись котом!</p>
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/index/promo-desktop.png 1x, img/index/promo-desktop@2x.png 2x">
-          <source media="(min-width: 769px)" srcset="img/index/promo-tablet.png 1x, img/index/promo-tablet@2x.png 2x">
-          <img class="promo__image" src="img/index/promo-mobile.png" srcset="img/index/promo-mobile@2x.png 2x" alt="Баночка Cat Energy Курица" width="280" height="270">
-        </picture>
-        <button class="promo__button" type="button">Подобрать программу</button>
-      </section>
+        <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
-      <section class="catalog">
-        <h2 class="visually-hidden">Каталог</h2>
-
-        <ul class="catalog__list">
-          <li class="catalog__item catalog__slim">
-            <h3 class="catalog__title">Похудение</h3>
-            <p class="catalog__description">Ваш кот весит больше собаки и почти утратил способность
-                  лазить по деревьям? Пора на диету! Cat Energy Slim поможет
-                  вашему питомцу сбросить лишний вес.</p>
-            <a class="catalog__button" href="#">Каталог Slim</a>
-          </li>
-          <li class="catalog__item catalog__pro">
-            <h3 class="catalog__title">Набор массы</h3>
-            <p class="catalog__description">Заработать авторитет среди дворовых котов и даже собак?
-                Серия Cat Energy Pro поможет вашему коту нарастить
-                необходимые мышцы!</p>
-            <a class="catalog__button" href="#">Каталог Pro</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="job">
-        <div class="job__wrapper">
-          <h2 class="job__title">Как это работает</h2>
-          <ul class="job__list">
-            <li class="job__item job__step-one">Функциональное питание содержит только полезные питательные вещества.</li>
-            <li class="job__item job__step-two">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-            <li class="job__item job__step-three">Замените один-два приема обычной еды на наше функциональное питание.</li>
-            <li class="job__item job__step-four">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="example">
-        <div class="example__wrapper">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой
-              обычный корм на Cat Energy Slim. Отличный результат
-              без изнуряющих тренировок! При этом он не менял своих
-              привычек и по-прежнему спит по 16 часов в день. </p>
-
-          <div class="profit">
-            <div class="stats">
-              <dl class="stats__list">
-                <dt class="stats__description">снижение веса</dt>
-                <dd class="stats__number">5 кг</dd>
-                <dt class="stats__description">затрачено времени</dt>
-                <dd class="stats__number">60 дней</dd>
-              </dl>
+          <div class="form__wrapper">
+            <div class="cat-info">
+              <div class="cat-info__wrapper">
+                <label class="cat-info__label" for="cat-name">Имя:*</label>
+                <input class="cat-info__input" placeholder="Барсик" type="text" name="cat-name" id="cat-name" minlength="3" pattern="[А-Яа-яЁё ]+" required >
+              </div>
+              <div class="cat-info__wrapper">
+                <label class="cat-info__label" for="cat-weight">Вес (кг):*</label>
+                <input class="cat-info__input" placeholder="7" type="number" name="cat-weight" id="cat-weight" required>
+              </div>
+              <div class="cat-info__wrapper">
+                <label class="cat-info__label" for="cat-age">Возраст (лет):</label>
+                <input class="cat-info__input" placeholder="7" type="number" name="cat-age" id="cat-age">
+              </div>
             </div>
 
-            <div class="expenses">
-              <span class="expenses__text">Затраты на питание:</span>
-              <span class="expenses__price">15 000 РУБ.</span>
-            </div>
+            <fieldset class="target">
+              <legend class="visually-hidden">Цель программы</legend>
+              <ul class="target__list">
+                <li class="target__item">
+                  <label class="target__label" for="lose-weight">
+                    <input class="visually-hidden target__input" type="radio" id="lose-weight" name="target" value="lose-weight" checked>
+                    <span class="target__input-mark"></span>
+                    Похудение
+                  </label>
+                </li>
+
+                <li class="target__item">
+                  <label class="target__label" for="weight-gain">
+                    <input class="visually-hidden target__input" type="radio" id="weight-gain" name="target" value="weight-gain">
+                    <span class="target__input-mark"></span>
+                    Набор массы
+                  </label>
+                </li>
+
+                <li class="target__item">
+                  <label class="target__label" for="help">
+                    <input class="visually-hidden target__input" type="radio" id="help" name="target" value="help">
+                    <span class="target__input-mark"></span>
+                    Не знаю (Нужен ваш совет)
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
           </div>
-        </div>
 
-        <div class="cat">
-          <picture>
-            <source media="(min-width: 769px)" srcset="img/index/cat-fat-tablet.png 1x, img/index/cat-fat-tablet@2x.png 2x">
-            <img class="cat__image" src="img/index/cat-fat-mobile.png" srcset="img/index/cat-fat-mobile@2x.png 2x" alt="Толстый кот" width="280" height="256">
-          </picture>
-        </div>
+          <section class="cat-owner">
+            <h2 class="cat-owner__title">Контактные данные (владельца кота)</h2>
+            <div class="cat-owner__wrapper">
+              <div class="cat-owner__container">
+                <label class="cat-owner__label" for="email">E-mail:*</label>
+                <input class="cat-owner__input cat-owner__email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </div>
+              <div class="cat-owner__container">
+                <label class="cat-owner__label" for="tel">Телефон:*</label>
+                <input class="cat-owner__input cat-owner__tel" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" minlength="11" required>
+              </div>
+            </div>
+          </section>
+
+          <section class="commentary">
+            <h2 class="commentary__title">Комментарий</h2>
+            <textarea class="commentary__text" name="commentary-text" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </section>
+
+          <section class="additional">
+            <fieldset class="additional__fieldset">
+              <legend class="additional__legend">
+                <h2 class="additional__title">Дополнительно</h2>
+              </legend>
+              <ul class="additional__list">
+                <li class="additional__item">
+                  <label class="additional__label" for="sweetener">
+                    <input class="visually-hidden additional__input" id="sweetener" name="additional" value="sweetener" type="checkbox" checked>
+                    <span class="control-mark-check"></span>
+                    Сахарозаменитель
+                  </label>
+                </li>
+                <li class="additional__item">
+                  <label class="additional__label" for="water">
+                    <input class="visually-hidden additional__input" id="water" name="additional" value="water" type="checkbox">
+                    <span class="control-mark-check"></span>
+                    Питьевая вода
+                  </label>
+                </li>
+                <li class="additional__item">
+                  <label class="additional__label" for="milk">
+                    <input class="visually-hidden additional__input" id="milk" name="additional" value="milk" type="checkbox">
+                    <span class="control-mark-check"></span>
+                    Молоко
+                  </label>
+                </li>
+                <li class="additional__item">
+                  <label class="additional__label" for="vitamins">
+                    <input class="visually-hidden additional__input" id="vitamins" name="additional" value="vitamins" type="checkbox">
+                    <span class="control-mark-check"></span>
+                    Витамины
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </section>
+
+          <button class="form__button" type="submit">Отправить заявку</button>
+          <p class="form__required">* — Обязательные поля</p>
+        </form>
+
       </section>
     </main>
 
     <footer class="main-footer">
       <div class="main-footer__location location">
-        <div class="location__adress adress adress-index">
+        <div class="location__adress adress">
           <p class="adress__call">приглашаем к сотрудничеству дилеров!</p>
           <p class="adress__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
