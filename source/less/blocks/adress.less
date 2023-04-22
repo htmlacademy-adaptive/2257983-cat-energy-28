@@ -6,7 +6,7 @@
   background-color: @bg-color-main;
 
   @media (min-width: @tablet-width) {
-    padding: 60px 70px 56px;
+    padding: 56px 70px 56px;
   }
 
   @media (min-width: @desktop-width) {
@@ -27,15 +27,18 @@
 
 .adress__call {
   .font-submain;
-  width: 139px;
+  width: 171px;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
   text-transform: uppercase;
+  color: @adress-call-text-color;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 26px;
+    padding-top: 4px;
+    padding-bottom: 5px;
   }
 }
 
@@ -53,5 +56,11 @@
 
   @media (min-width: @desktop-width) {
     text-align: left;
+  }
+}
+
+.adress__city {
+  @media (min-width: @tablet-width) {
+    padding-top: 19px;
   }
 }

@@ -30,17 +30,20 @@
 
 .catalog__item {
   box-sizing: border-box;
-  min-height: 266px;
   padding: 30px 33px 18px 20px;
   background-color: @bg-color-main;
   position: relative;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+
     min-height: 372px;
-    padding: 70px 316px 53px 52px;
+    padding: 77px 316px 53px 52px;
   }
 
   @media (min-width: @desktop-width) {
+    display: block;
     width: 570px;
     min-height: 374px;
     padding: 77px 61px 55px 52px;
@@ -74,6 +77,64 @@
   }
 }
 
+.catalog__slim::after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 29px;
+
+  width: 36px;
+  height: 50px;
+  background-image: url("../img/index/catalog-cat-slim.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 81px;
+    left: auto;
+    right: 92px;
+    width: 140px;
+    height: 194px;
+    background-size: 140px 194px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 41px;
+    left: 67px;
+    width: 70px;
+    height: 97px;
+    background-size: 70px 97px;
+  }
+}
+
+.catalog__pro::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 13px;
+
+  width: 67px;
+  height: 28px;
+  background-image: url("../img/index/catalog-cat-pro.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 135px;
+    left: auto;
+    right: 28px;
+    width: 268px;
+    height: 112px;
+    background-size: 268px 112px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 67px;
+    left: 33px;
+    width: 134px;
+    height: 56px;
+    background-size: 134px 56px;
+  }
+}
+
 .catalog__title {
   .font-submain;
   font-size: 24px;
@@ -95,14 +156,18 @@
 .catalog__description {
   margin: 0;
   padding-bottom: 23px;
+  border-bottom: 1px solid @social-line;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    color: #000000;
+
+    margin-bottom: auto;
+    color: @text-color_main;
+    border: none;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     padding-bottom: 23px;
   }
 }
@@ -118,6 +183,7 @@
   position: relative;
   width: 139px;
   padding: 4px 0;
+  margin-top: 15px;
 
   color: @text-color_main;
 
@@ -125,6 +191,8 @@
     width: 165px;
     font-size: 20px;
     line-height: 30px;
+
+    margin: 0;
   }
 }
 

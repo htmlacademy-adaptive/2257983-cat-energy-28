@@ -21,9 +21,16 @@
   }
 }
 
-.main-header__logo-link,
+.main-header__hero-logo {
+  display: block;
+}
+
 .main-header__logo-link-text {
   display: contents;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-header__burger {
@@ -81,6 +88,8 @@
   @media (min-width: @tablet-width) {
     width: 440px;
     position: static;
+    margin-top: 8px;
+
     display: flex;
     justify-content: space-between;
   }
@@ -125,6 +134,8 @@
     font-size: 18px;
     line-height: 24px;
     background-color: inherit;
+
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
