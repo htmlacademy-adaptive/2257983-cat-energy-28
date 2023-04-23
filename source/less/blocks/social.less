@@ -1,26 +1,27 @@
-.social__list {
-  padding: 0;
-  margin: 0;
+.social {
+  min-width: 280px;
+  padding: 20px 0;
+  border-top: 1px solid @social-line;
+  border-bottom: 1px solid @social-line;
+
   display: flex;
-  gap: 24px;
-  position: relative;
-}
-
-.social__list::before,
-.social__list::after {
-  content: "";
-  display: block;
-  position: absolute;
-
-  width: 281px;
-  height: 1px;
-  top: -20px;
-  left: -74px;
-  background-color: @social-line;
+  justify-content: center;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    padding: 0;
+    border: none;
   }
+}
+
+.social__list {
+  max-width: 236px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .social__list::after {

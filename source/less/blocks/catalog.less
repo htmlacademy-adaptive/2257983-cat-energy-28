@@ -181,18 +181,24 @@
 
   display: block;
   position: relative;
-  width: 139px;
-  padding: 4px 0;
+  min-width: 87px;
+  max-width: max-content;
+  padding: 4px 47px 4px 0;
   margin-top: 15px;
 
   color: @text-color_main;
 
   @media (min-width: @tablet-width) {
-    width: 165px;
     font-size: 20px;
     line-height: 30px;
 
+    min-width: 108px;
+    padding: 4px 57px 4px 0;
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 4px 60px 4px 0;
   }
 }
 
@@ -200,32 +206,22 @@
   content: "";
   display: block;
   position: absolute;
+  top: calc(50% - 1px);
+  right: 14px;
 
   width: 18px;
   height: 2px;
-  top: 11px;
-  left: 102px;
   background-color: @bg-color-arrow;
-
-  @media (min-width: @tablet-width) {
-    top: 18px;
-    left: 133px;
-  }
 }
 
 .catalog__button::after {
   content: "";
   display: block;
   position: absolute;
+  top: calc(50% - 4px);
+  right: 9px;
 
-  top: 8px;
-  left: 119px;
   border-style: solid;
   border-width: 4.5px 0 4.5px 6px;
   border-color: transparent transparent transparent @bg-color-arrow;
-
-  @media (min-width: @tablet-width) {
-    top: 15px;
-    left: 150px;
-  }
 }

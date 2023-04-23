@@ -26,8 +26,8 @@
     align-items: flex-start;
 
     background-image: url("../img/index/cat-bg-desktop.jpg");
-    background-size: contain;
-    background-position: right;
+    background-size: 720px 694px;
+    background-position: top right;
   }
 }
 
@@ -35,6 +35,8 @@
   .font-submain;
   font-size: 36px;
   line-height: 36px;
+
+  width: 416px;
   margin: 0;
   padding-bottom: 25px;
   text-align: center;
@@ -109,10 +111,12 @@
   .button-color;
   box-sizing: border-box;
   width: 100%;
-  height: 40px;
+  min-height: 40px;
+  padding: 7px 0;
   border: none;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
 
   display: flex;
   justify-content: center;
@@ -121,8 +125,10 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+
     width: 244px;
-    height: 54px;
+    min-height: 54px;
+    padding: 14px 0;
     position: absolute;
     left: 121px;
     bottom: 526px;
