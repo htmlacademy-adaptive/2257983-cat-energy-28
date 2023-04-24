@@ -17,12 +17,15 @@
   margin: 0 20px 21px;
   box-sizing: border-box;
   width: calc(100% - 20px - 20px);
-  height: 40px;
+  min-height: 40px;
+  padding: 7px 15px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 65px 72px 71px;
     width: 282px;
-    height: 52px;
+    min-height: 52px;
+
+    margin: 0 65px 72px 71px;
+    padding: 13px 45px;
   }
 
   @media (min-width: @desktop-width) {
@@ -36,10 +39,17 @@
   text-align: center;
 
   margin: 0;
-  padding: 0 0 32px 0;
+  padding: 0 20px 32px 20px;
 
   @media (min-width: @tablet-width) {
     display: inline-flex;
-    padding: 0;
+
+    min-width: 282px;
+    max-width: 955px;
+    padding: 0 0 17px 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 568px;
   }
 }

@@ -1,5 +1,6 @@
 .additional {
   padding: 0 20px 34px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 0 70px 54px;
@@ -7,6 +8,47 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 110px 61px;
+  }
+}
+
+.additional::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 0;
+
+    width: 30px;
+    height: 2px;
+    background-color: @form-title-line-color;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+  }
+}
+
+.additional::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 20px;
+
+  width: calc(100% - 22px);
+  height: 2px;
+  background-color: @form-title-line-color;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    left: 70px;
+    width: calc(100% - 70px);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 110px;
+    width: 1330px;
   }
 }
 
@@ -25,31 +67,25 @@
   font-size: 24px;
   line-height: 26px;
 
+  min-width: 141px;
+  max-width: 187px;
+  width: fit-content;
   margin: 0;
-  padding: 0 0 34px 0;
-  position: relative;
+  padding: 0 23px 34px 0;
+  background-color: @text-bg-color;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
 
-    padding: 0 0 57px 0;
+    min-width: 211px;
+    max-width: 514px;
+    padding: 0 41px 57px 0;
   }
-}
 
-.additional__title::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 164px;
-
-  width: 136px;
-  height: 2px;
-  background-color: @form-title-line-color;
-
-  @media (min-width: @tablet-width) {
-    top: 22px;
-    left: 252px;
+  @media (min-width: @desktop-width) {
+    max-width: 700px;
+    padding: 0 40px 57px 0;
   }
 }
 
@@ -126,13 +162,22 @@
 }
 
 .additional__input[type="checkbox"]:checked + .control-mark-check::after {
-  content: url("../../img/form/check.svg");
+  content: "";
   position: absolute;
-  top: 6px;
+  top: 8px;
   left: 6px;
 
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/form/check.svg");
+  background-position: center;
+
   @media (min-width: @tablet-width) {
-    top: 5px;
-    left: 11px;
+    top: 11px;
+    left: 8px;
+
+    width: 24px;
+    height: 19px;
+    background-size: 24px 19px;
   }
 }

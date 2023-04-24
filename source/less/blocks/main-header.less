@@ -3,9 +3,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
+    align-items: flex-start;
   }
 
   @media (min-width: @desktop-width) {
@@ -13,11 +15,38 @@
   }
 }
 
-.main-header-index {
+.main-header-index::before {
   @media (min-width: @desktop-width) {
+    content: "";
     position: absolute;
-    width: 1220px;
-    z-index: 1;
+    top: 0;
+    right: 0;
+
+    width: 720px;
+    height: 694px;
+    background-image: url("../img/index/cat-bg-desktop.jpg");
+    background-size: 720px 694px;
+    background-position: top right;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/cat-bg-desktop@2x.jpg");
+      background-size: 720px 694px;
+    }
+  }
+}
+
+.main-header-index::after {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 720px;
+    height: 694px;
+    background-color: @bg-image-color;
+    z-index: -1;
   }
 }
 
@@ -87,33 +116,19 @@
   z-index: 1;
 
   @media (min-width: @tablet-width) {
-    width: 440px;
+    min-width: 440px;
+    max-width: 532px;
     position: static;
-    margin-top: 8px;
+    margin-top: 18px;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
-    width: 478px;
-  }
-}
-
-.main-header__item {
-  border-top: 1px solid @menu-line;
-
-  @media (min-width: @tablet-width) {
-    border: none;
-  }
-}
-
-.main-header__item:last-child {
-  border-bottom: 1px solid @menu-line;
-
-  @media (min-width: @tablet-width) {
-    border: none;
+    min-width: 478px;
+    max-width: 591px;
+    margin-top: 16px;
   }
 }
 
@@ -128,6 +143,7 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  border-top: 1px solid @menu-line;
   color: @text-color_main;
   background-color: @button-text-color;
 
@@ -135,15 +151,50 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    background-color: inherit;
 
+    min-width: 64px;
+    max-width: 154px;
     padding: 0;
+    border: none;
+    background-color: inherit;
   }
 
   @media (min-width: @desktop-width) {
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
+
+    min-width: 71px;
+    max-width: 171px;
+  }
+}
+
+.main-header__item:nth-child(1n) .main-header__link {
+  @media (min-width: @tablet-width) {
+    margin-right: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 37px;
+  }
+}
+
+.main-header__item:nth-child(2n) .main-header__link {
+  @media (min-width: @tablet-width) {
+    margin-right: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 32px;
+  }
+}
+
+.main-header__item:nth-child(3n) .main-header__link {
+  border-bottom: 1px solid @menu-line;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    margin-right: 0;
   }
 }
 
@@ -153,23 +204,41 @@
   }
 }
 
-.main-header__link-index--active {
-  @media (min-width: @tablet-width) {
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-color: @button-bg-color;
-  }
+.main-header__link--active {
+  position: relative;
+}
 
-  @media (min-width: @desktop-width) {
-    text-decoration-color: @button-text-color;
+.main-header__link--active::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background-color: @button-bg-color;
   }
 }
 
-.main-header__link--active {
+.main-header__link-index--active {
+  position: relative;
+}
+
+.main-header__link-index--active::after {
   @media (min-width: @tablet-width) {
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-color: @button-bg-color;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background-color: @button-bg-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @text-bg-color;
   }
 }
 

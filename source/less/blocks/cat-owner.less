@@ -1,5 +1,6 @@
 .cat-owner {
   padding: 26px 20px 23px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 0 66px 65px 69px;
@@ -10,38 +11,71 @@
   }
 }
 
+.cat-owner::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 0;
+
+    width: 30px;
+    height: 2px;
+    background-color: @form-title-line-color;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+  }
+}
+
+.cat-owner::after {
+  content: "";
+  position: absolute;
+  top: 42px;
+  left: 23px;
+
+  width: calc(100% - 22px);
+  height: 2px;
+  background-color: @form-title-line-color;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    left: 69px;
+    width: calc(100% - 69px);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 110px;
+    width: 1330px;
+  }
+}
+
 .cat-owner__title {
   .font-submain;
   font-size: 24px;
   line-height: 26px;
 
-  width: 187px;
+  max-width: 187px;
   margin: 0;
   padding-bottom: 35px;
-  position: relative;
+  padding-right: 14px;
+  background-color: @text-bg-color;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
 
-    width: 514px;
+    max-width: 514px;
     padding-bottom: 76px;
+    padding-right: 40px;
   }
-}
 
-.cat-owner__title::after {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 201px;
-
-  width: 99px;
-  height: 2px;
-  background-color: @form-title-line-color;
-
-  @media (min-width: @tablet-width) {
-    top: 22px;
-    left: 554px;
+  @media (min-width: @desktop-width) {
+    min-width: 514px;
+    max-width: 700px;
+    width: fit-content;
   }
 }
 

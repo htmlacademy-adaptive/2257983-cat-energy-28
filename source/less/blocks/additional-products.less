@@ -45,7 +45,6 @@
 
   @media (min-width: @desktop-width) {
     border: none;
-    border-bottom: 1px solid @additional-products-line-color;
   }
 }
 
@@ -61,6 +60,12 @@
   @media (min-width: @desktop-width) {
     display: flex;
     padding: 15px 0 16px;
+  }
+}
+
+.additional-products__item:last-of-type {
+  @media (min-width: @desktop-width) {
+    border-bottom: 1px solid @additional-products-line-color;
   }
 }
 
@@ -147,11 +152,12 @@
   border: none;
   min-width: 100%;
   min-height: 40px;
+  padding: 7px 5px;
 
   @media (min-width: @desktop-width) {
     min-width: 244px;
     max-width: 244px;
-    height: 40px;
+    height: fit-content;
     margin-left: auto;
   }
 }

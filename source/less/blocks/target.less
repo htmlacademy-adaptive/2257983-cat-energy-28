@@ -33,7 +33,7 @@
   line-height: 18px;
   text-transform: uppercase;
 
-  height: 30px;
+  min-height: 30px;
   padding-left: 45px;
   color: @form-text-fieldset-color;
   position: relative;
@@ -45,7 +45,7 @@
     font-size: 20px;
     line-height: 30px;
 
-    height: 40px;
+    min-height: 40px;
     padding-left: 60px;
   }
 }
@@ -71,8 +71,8 @@
 .target__input[type="radio"]:checked + .target__input-mark::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 10.5px;
+  top: 8px;
+  left: 8px;
 
   width: 13px;
   height: 13px;
@@ -80,6 +80,9 @@
   background-color: @radio-checked-color;
 
   @media (min-width: @tablet-width) {
+    top: 10.5px;
+    left: 10.5px;
+
     width: 18px;
     height: 18px;
   }
