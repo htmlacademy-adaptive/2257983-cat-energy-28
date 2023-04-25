@@ -19,8 +19,16 @@
 
 .bottom__link {
   display: contents;
+
+  &:hover .bottom__link-img path {
+    fill: #3e3e3e;
+  }
+
+  &:active .bottom__link-img path {
+    fill: #6b6b6b;
+  }
 }
 
-.bottom__svg {
-  height: 26px;
+.bottom__link-img {
+  height: 24px;
 }

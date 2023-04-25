@@ -52,6 +52,14 @@
 
 .main-header__hero-logo {
   display: block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-header__logo-link-text {
@@ -167,6 +175,15 @@
     min-width: 71px;
     max-width: 171px;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.main-header__link--disabled {
+  pointer-events: none;
+  opacity: 0.3;
 }
 
 .main-header__item:nth-child(1n) .main-header__link {

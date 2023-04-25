@@ -141,6 +141,14 @@
 
     padding-left: 60px;
   }
+
+  &:hover .control-mark-check {
+    border-color: #bababa;
+  }
+
+  &:has(.additional__input:disabled) {
+    opacity: 0.3;
+  }
 }
 
 /*Checkbox*/
@@ -164,8 +172,9 @@
 .additional__input[type="checkbox"]:checked + .control-mark-check::after {
   content: "";
   position: absolute;
-  top: 8px;
-  left: 6px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   width: 18px;
   height: 14px;
@@ -173,9 +182,6 @@
   background-position: center;
 
   @media (min-width: @tablet-width) {
-    top: 11px;
-    left: 8px;
-
     width: 24px;
     height: 19px;
     background-size: 24px 19px;

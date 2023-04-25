@@ -200,7 +200,22 @@
   @media (min-width: @desktop-width) {
     padding: 4px 60px 4px 0;
   }
+
+  &:hover::before {
+    right: 5px;
+    transition: 0.4s;
+  }
+
+  &:hover::after {
+    right: 0;
+    transition: 0.4s;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
+
 
 .catalog__button::before {
   content: "";

@@ -4,7 +4,6 @@
   gap: 32px;
   margin: 0;
   padding-bottom: 34px;
-  position: relative;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
@@ -15,42 +14,38 @@
   }
 }
 
+.stats__item {
+  position: relative;
+}
+
 .stats__description {
   font-size: 12px;
   line-height: 12px;
-
   color: @text-color-submain;
+
   position: absolute;
   top: 46px;
-  left: 22px;
-  width: 77px;
+
+  left: 50%;
+  transform: translateX(-50%);
+  width: 81px;
   text-align: center;
   background-color: @bg-color-submain;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 14px;
-    width: 114px;
+
+    width: max-content;
+    max-width: 125px;
+    padding: 0 10px;
+
     top: 63px;
-    left: 24px;
     background-color: @text-bg-color;
   }
 
   @media (min-width: @desktop-width) {
     background-color: @bg-color-submain;
-  }
-}
-
-.stats__description:nth-of-type(2) {
-  width: 87px;
-  text-align: center;
-  left: auto;
-  right: 18px;
-
-  @media (min-width: @tablet-width) {
-    width: 142px;
-    left: auto;
-    right: 10px;
   }
 }
 

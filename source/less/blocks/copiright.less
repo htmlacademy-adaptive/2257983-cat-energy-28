@@ -1,8 +1,5 @@
 .copyright {
   width: 281px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   @media (min-width: @tablet-width) {
     width: 168px;
@@ -15,13 +12,19 @@
   text-decoration: none;
   color: @text-color-submain;
 
-  max-width: 113px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
-    padding: 9px 0;
+    padding: 1.5px 0;
   }
-}
 
-.copyright__link-logo {
-  display: contents;
+  &:hover .copyright__link-img path {
+    fill: @social-button-hover-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
