@@ -24,11 +24,14 @@
   color: @text-color-submain;
 
   position: absolute;
-  top: 46px;
+  bottom: -12px;
 
   left: 50%;
   transform: translateX(-50%);
   width: 81px;
+  max-height: 24px;
+  text-overflow: ellipsis;
+  overflow: hidden;
   text-align: center;
   background-color: @bg-color-submain;
 
@@ -38,9 +41,10 @@
 
     width: max-content;
     max-width: 125px;
+    max-height: 14px;
     padding: 0 10px;
 
-    top: 63px;
+    bottom: -5px;
     background-color: @text-bg-color;
   }
 

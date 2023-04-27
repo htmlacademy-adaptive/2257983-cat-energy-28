@@ -15,41 +15,6 @@
   }
 }
 
-.main-header-index::before {
-  @media (min-width: @desktop-width) {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 720px;
-    height: 694px;
-    background-image: url("../img/index/cat-bg-desktop.jpg");
-    background-size: 720px 694px;
-    background-position: top right;
-    z-index: -1;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/index/cat-bg-desktop@2x.jpg");
-      background-size: 720px 694px;
-    }
-  }
-}
-
-.main-header-index::after {
-  @media (min-width: @desktop-width) {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 720px;
-    height: 694px;
-    background-color: @bg-image-color;
-    z-index: -1;
-  }
-}
-
 .main-header__hero-logo {
   display: block;
 
