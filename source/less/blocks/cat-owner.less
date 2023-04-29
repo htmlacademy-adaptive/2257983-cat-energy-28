@@ -99,6 +99,8 @@
   align-items: center;
   gap: 10px;
 
+  position: relative;
+
   @media (min-width: @tablet-width) {
     gap: 20px;
   }
@@ -107,6 +109,64 @@
     width: 569px;
   }
 }
+
+/*Эффекты для поля email и phone*/
+.cat-owner__container--email::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 17px;
+  height: 13px;
+  mask: url("../../img/form/email.svg");
+  mask-position: center;
+  mask-size: 17px 13px;
+  mask-repeat: no-repeat;
+  background-color: @form-svg-static-color;
+
+  @media (min-width: @tablet-width) {
+    top: 19px;
+    right: 19px;
+  }
+}
+
+.cat-owner__container--email:has(.cat-owner__input:focus-visible)::after {
+  background-color: @form-svg-focus-color;
+}
+
+.cat-owner__container--email:has(.cat-owner__input:invalid:not(:placeholder-shown))::after {
+  background-color: @form-svg-invalid-color;
+}
+
+.cat-owner__container--tel::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 16px;
+
+  width: 15px;
+  height: 15px;
+  mask: url("../../img/form/phone.svg");
+  mask-position: center;
+  mask-size: 15px 15px;
+  mask-repeat: no-repeat;
+  background-color: @form-svg-static-color;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    right: 19px;
+  }
+}
+
+.cat-owner__container--tel:has(.cat-owner__input:focus-visible)::after {
+  background-color: @form-svg-focus-color;
+}
+
+.cat-owner__container--tel:has(.cat-owner__input:invalid:not(:placeholder-shown))::after {
+  background-color: @form-svg-invalid-color;
+}
+/*Конец эффектов*/
 
 .cat-owner__label {
   .font-submain;
@@ -157,27 +217,5 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-  }
-}
-
-.cat-owner__email {
-  background-image: url("../../img/form/email.svg");
-  background-repeat: no-repeat;
-  background-size: 17px 13px;
-  background-position: right 15px top 15px;
-
-  @media (min-width: @tablet-width) {
-    background-position: right 19px top 19px;
-  }
-}
-
-.cat-owner__tel {
-  background-image: url("../../img/form/phone.svg");
-  background-repeat: no-repeat;
-  background-size: 15px 15px;
-  background-position: right 16px top 15px;
-
-  @media (min-width: @tablet-width) {
-    background-position: right 19px top 18px;
   }
 }

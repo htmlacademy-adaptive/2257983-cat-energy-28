@@ -1,6 +1,5 @@
 .promo {
   padding: 27px 20px 0;
-  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -21,7 +20,7 @@
 .promo::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 65px;
 
   width: 320px;
   height: 302px;
@@ -41,7 +40,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: -112px;
+    top: 0;
     right: 0;
 
     width: 720px;
@@ -61,7 +60,7 @@
 .promo::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 65px;
 
   width: 320px;
   height: 302px;
@@ -73,7 +72,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: -112px;
+    top: 0;
     right: 0;
 
     background-color: @bg-image-color;
@@ -101,6 +100,7 @@
 
     width: 416px;
     padding-left: calc(118px - 30px);
+    padding-bottom: 40px;
     align-self: flex-start;
     text-align: start;
   }
@@ -123,7 +123,7 @@
     line-height: 20px;
     align-self: flex-start;
     text-align: start;
-    padding-left: calc(118px - 30px);
+    padding-left: calc(118px - 28px);
     padding-bottom: 20px;
     color: @text-color_main;
   }
@@ -153,7 +153,6 @@
 
   @media (min-width: @desktop-width) {
     min-height: auto;
-    position: static;
   }
 }
 
@@ -175,8 +174,8 @@
   @media (min-width: @desktop-width) {
     width: 552px;
     height: 499px;
-    top: 29px;
-    right: 330px;
+    top: -261px;
+    right: 220px;
     transform: none;
   }
 }

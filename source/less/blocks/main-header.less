@@ -1,11 +1,14 @@
 .main-header {
   padding: 10px 20px 17px;
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 
   @media (min-width: @tablet-width) {
+    min-width: 708px;
+    margin: 0;
     padding: 0 30px;
     align-items: flex-start;
   }
@@ -15,8 +18,18 @@
   }
 }
 
+.main-header__nav {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+}
+
 .main-header__hero-logo {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    margin-right: auto;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -33,6 +46,11 @@
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.main-header__text-logo {
+  margin-top: 3px;
+  margin-right: 7px;
 }
 
 .main-header__burger {
@@ -52,13 +70,13 @@
 .main-header__nav--closed .main-header__burger::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
 
   width: 24px;
   height: 1.5px;
   background-color: @burger-color-line;
-  box-shadow: 0 6.5px 0 0 @burger-color-line, 0 13px 0 0 @burger-color-line;
+  box-shadow: 0 8px 0 0 @burger-color-line, 0 16px 0 0 @burger-color-line;
 }
 
 .main-header__nav--opened .main-header__burger::before,
@@ -112,7 +130,7 @@
   line-height: 20px;
 
   display: block;
-  padding: 22px 0 24px 0;
+  padding: 22px 10px 24px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -157,7 +175,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 37px;
+    margin-right: 34px;
   }
 }
 
@@ -194,7 +212,7 @@
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
-    bottom: -10px;
+    bottom: -6px;
     left: 0;
 
     width: 100%;
@@ -220,6 +238,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    bottom: -6px;
     background-color: @text-bg-color;
   }
 }

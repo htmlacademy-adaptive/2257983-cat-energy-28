@@ -3,14 +3,15 @@
   flex-wrap: wrap;
   gap: 32px;
   margin: 0;
-  padding-bottom: 34px;
+  padding-bottom: 32px;
 
   @media (min-width: @tablet-width) {
+    gap: 42px;
     padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 60px;
+    padding-bottom: 58px;
   }
 }
 
@@ -57,6 +58,7 @@
   .font-submain;
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
 
   box-sizing: border-box;
   width: 124px;
@@ -74,9 +76,3 @@
   }
 }
 
-.expenses__text,
-.expenses__price {
-  .font-submain;
-  line-height: 20px;
-  text-transform: uppercase;
-}
