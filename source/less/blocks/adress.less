@@ -13,7 +13,7 @@
     box-sizing: border-box;
     width: 565px;
     max-height: 300px;
-    padding: 48px 75px 56px 80px;
+    padding: 47px 75px 56px 80px;
     position: absolute;
     top: 50%;
     left: 110px;
@@ -43,6 +43,18 @@
     padding-top: 4px;
     padding-bottom: 5px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 1px 0;
+    overflow: hidden;
+  }
+}
+
+.adress__wrapper {
+  @media (min-width: @desktop-width) {
+    margin: 1px 0;
+    overflow: hidden;
+  }
 }
 
 .adress__text {
@@ -59,11 +71,21 @@
 
   @media (min-width: @desktop-width) {
     text-align: left;
+
+    max-height: 140px;
+    margin: 1px 0;
+    overflow: hidden;
   }
 }
 
 .adress__city {
   @media (min-width: @tablet-width) {
-    padding-top: 19px;
+    padding-top: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-height: 140px;
+    margin: 1px 0;
+    overflow: hidden;
   }
 }
