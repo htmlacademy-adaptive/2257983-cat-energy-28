@@ -3,9 +3,14 @@
   height: 256px;
   position: relative;
 
+  display: grid;
+  grid-template-columns: repeat(2, 280px);
+
   @media (min-width: @tablet-width) {
     width: 560px;
     height: 512px;
+
+    grid-template-columns: repeat(2, 280px);
   }
 
   @media (min-width: @desktop-width) {
@@ -14,16 +19,20 @@
   }
 }
 
-.cat__before {
-  position: absolute;
-  width: 50%;
+.cat__before,
+.cat__after {
+  position: relative;
   overflow: hidden;
-  top: 0;
+}
+
+.cat__before-img {
+  position: absolute;
   left: 0;
 }
 
-.cat__after {
-  overflow: hidden;
+.cat__after-img {
+  position: absolute;
+  right: 0;
 }
 
 .cat__slider {
