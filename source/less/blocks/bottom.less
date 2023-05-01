@@ -18,18 +18,18 @@
 }
 
 .bottom__link {
-  display: contents;
 
-  &:hover .bottom__link-img path {
-    fill: #3e3e3e;
+  &:hover .bottom__link-img {
+    fill: @logo-text-hover-color;
   }
 
-  &:active .bottom__link-img path {
-    fill: #6b6b6b;
+  &:active .bottom__link-img {
+    fill: @logo-text-active-color;
   }
 }
 
 .bottom__link-img {
+  fill: @logo-text-color;
   height: 24px;
 
   @media (min-width: @tablet-width) {

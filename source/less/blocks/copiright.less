@@ -19,13 +19,17 @@
 
   @media (min-width: @tablet-width) {
     padding: 1.5px 0;
-  }
 
-  &:hover .copyright__link-img path {
-    fill: @social-button-hover-color;
-  }
+    &:hover .copyright__link-img {
+      fill: @social-button-hover-color;
+    }
 
-  &:active {
-    opacity: 0.3;
+    &:active {
+      opacity: 0.3;
+    }
   }
+}
+
+.copyright__link-img {
+  fill: @social-button-default-color;
 }
