@@ -1,8 +1,5 @@
 .copyright {
   width: 281px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   @media (min-width: @tablet-width) {
     width: 168px;
@@ -15,11 +12,24 @@
   text-decoration: none;
   color: @text-color-submain;
 
+  display: grid;
+  grid-template-columns: 113px 27px;
+  justify-content: space-between;
+  align-items: center;
+
   @media (min-width: @tablet-width) {
-    padding: 9px 0;
+    padding: 1.5px 0;
+
+    &:hover .copyright__link-img {
+      fill: @social-button-hover-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
-.copyright__link-logo {
-  display: contents;
+.copyright__link-img {
+  fill: @social-button-default-color;
 }

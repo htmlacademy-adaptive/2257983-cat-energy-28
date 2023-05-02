@@ -1,6 +1,27 @@
 .button-color() {
   background-color: @button-bg-color;
   color: @button-text-color;
+  cursor: pointer;
+}
+
+.button-effects-1() {
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: #8ec36d;
+  }
+}
+
+.button-effects-2() {
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: #b9b9b9;
+  }
 }
 
 @font-family-main: "Lato", sans-serif;
@@ -37,6 +58,9 @@
   @media (min-width: @tablet-width) {
     left: 0;
     top: 40px;
+
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -50,6 +74,33 @@
   position: absolute;
   z-index: -1;
   top: 0;
-  right: 0;
+  right: 5px;
   color: #f2f2f2;
+}
+
+.social-image-mask-setting() {
+  background-color: @social-button-default-color;
+
+  &:hover {
+    background-color: @social-button-hover-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.input-border-effects() {
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border: 2px solid #444444;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: #ff8282;
+  }
 }

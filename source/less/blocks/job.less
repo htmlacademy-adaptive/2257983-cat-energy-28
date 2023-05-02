@@ -2,11 +2,13 @@
   padding: 20px 21px 49px;
 
   @media (min-width: @tablet-width) {
-    padding: 25px 105px 0 31px;
+    padding: 45px 105px 47px 31px;
+    border-bottom: 1px solid @menu-line;
   }
 
   @media (min-width: @desktop-width) {
     padding: 71px 106px 0 110px;
+    border: none;
   }
 }
 
@@ -51,10 +53,13 @@
   position: relative;
   color: @text-color-submain;
 
+  display: flex;
+  align-items: center;
+
   @media (min-width: @tablet-width) {
-    height: 280px;
+    min-height: 280px;
     padding: 0;
-    padding-top: 151px;
+    padding-top: 93px;
     font-size: 16px;
     line-height: 24px;
   }

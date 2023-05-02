@@ -1,5 +1,6 @@
 .cat-owner {
   padding: 26px 20px 23px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 0 66px 65px 69px;
@@ -10,38 +11,71 @@
   }
 }
 
+.cat-owner::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 0;
+
+    width: 30px;
+    height: 2px;
+    background-color: @form-title-line-color;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+  }
+}
+
+.cat-owner::after {
+  content: "";
+  position: absolute;
+  top: 42px;
+  left: 23px;
+
+  width: calc(100% - 22px);
+  height: 2px;
+  background-color: @form-title-line-color;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    left: 69px;
+    width: calc(100% - 69px);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 110px;
+    width: 1330px;
+  }
+}
+
 .cat-owner__title {
   .font-submain;
   font-size: 24px;
   line-height: 26px;
 
-  width: 187px;
+  max-width: 187px;
   margin: 0;
   padding-bottom: 35px;
-  position: relative;
+  padding-right: 14px;
+  background-color: @text-bg-color;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
 
-    width: 514px;
+    max-width: 514px;
     padding-bottom: 76px;
+    padding-right: 40px;
   }
-}
 
-.cat-owner__title::after {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 201px;
-
-  width: 99px;
-  height: 2px;
-  background-color: @form-title-line-color;
-
-  @media (min-width: @tablet-width) {
-    top: 22px;
-    left: 554px;
+  @media (min-width: @desktop-width) {
+    min-width: 514px;
+    max-width: 700px;
+    width: fit-content;
   }
 }
 
@@ -65,14 +99,74 @@
   align-items: center;
   gap: 10px;
 
+  position: relative;
+
   @media (min-width: @tablet-width) {
-    gap: 20px;
+    gap: 22px;
   }
 
   @media (min-width: @desktop-width) {
     width: 569px;
   }
 }
+
+/*Эффекты для поля email и phone*/
+.cat-owner__container--email::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 17px;
+  height: 13px;
+  mask: url("../../img/form/email.svg");
+  mask-position: center;
+  mask-size: 17px 13px;
+  mask-repeat: no-repeat;
+  background-color: @form-svg-static-color;
+
+  @media (min-width: @tablet-width) {
+    top: 19px;
+    right: 19px;
+  }
+}
+
+.cat-owner__container--email:has(.cat-owner__input:focus-visible)::after {
+  background-color: @form-svg-focus-color;
+}
+
+.cat-owner__container--email:has(.cat-owner__input:invalid:not(:placeholder-shown))::after {
+  background-color: @form-svg-invalid-color;
+}
+
+.cat-owner__container--tel::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 16px;
+
+  width: 15px;
+  height: 15px;
+  mask: url("../../img/form/phone.svg");
+  mask-position: center;
+  mask-size: 15px 15px;
+  mask-repeat: no-repeat;
+  background-color: @form-svg-static-color;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    right: 19px;
+  }
+}
+
+.cat-owner__container--tel:has(.cat-owner__input:focus-visible)::after {
+  background-color: @form-svg-focus-color;
+}
+
+.cat-owner__container--tel:has(.cat-owner__input:invalid:not(:placeholder-shown))::after {
+  background-color: @form-svg-invalid-color;
+}
+/*Конец эффектов*/
 
 .cat-owner__label {
   .font-submain;
@@ -89,6 +183,7 @@
 }
 
 .cat-owner__input {
+  .input-border-effects();
   .font-submain;
   font-size: 16px;
   line-height: 18px;
@@ -122,27 +217,5 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-  }
-}
-
-.cat-owner__email {
-  background-image: url("../../img/form/email.svg");
-  background-repeat: no-repeat;
-  background-size: 17px 13px;
-  background-position: right 15px top 15px;
-
-  @media (min-width: @tablet-width) {
-    background-position: right 19px top 19px;
-  }
-}
-
-.cat-owner__tel {
-  background-image: url("../../img/form/phone.svg");
-  background-repeat: no-repeat;
-  background-size: 15px 15px;
-  background-position: right 16px top 15px;
-
-  @media (min-width: @tablet-width) {
-    background-position: right 19px top 18px;
   }
 }

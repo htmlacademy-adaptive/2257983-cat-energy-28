@@ -1,11 +1,16 @@
 .main-header {
   padding: 10px 20px 17px;
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media (min-width: @tablet-width) {
+    min-width: 708px;
+    margin: 0;
     padding: 0 30px;
+    align-items: flex-start;
   }
 
   @media (min-width: @desktop-width) {
@@ -13,17 +18,40 @@
   }
 }
 
-.main-header-index {
-  @media (min-width: @desktop-width) {
-    position: absolute;
-    width: 1220px;
-    z-index: 1;
+.main-header__nav {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
   }
 }
 
-.main-header__logo-link,
+.main-header__hero-logo {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    margin-right: auto;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .main-header__logo-link-text {
   display: contents;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__text-logo {
+  fill: @logo-text-color;
+  margin-top: 3px;
+  margin-right: 7px;
 }
 
 .main-header__burger {
@@ -43,13 +71,13 @@
 .main-header__nav--closed .main-header__burger::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
 
   width: 24px;
   height: 1.5px;
   background-color: @burger-color-line;
-  box-shadow: 0 6.5px 0 0 @burger-color-line, 0 13px 0 0 @burger-color-line;
+  box-shadow: 0 8px 0 0 @burger-color-line, 0 16px 0 0 @burger-color-line;
 }
 
 .main-header__nav--opened .main-header__burger::before,
@@ -77,32 +105,22 @@
   position: absolute;
   top: 65px;
   left: 0;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
-    width: 440px;
+    min-width: 440px;
+    max-width: 532px;
     position: static;
+    margin-top: 18px;
+
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
-    width: 478px;
-  }
-}
-
-.main-header__item {
-  border-top: 1px solid @menu-line;
-
-  @media (min-width: @tablet-width) {
-    border: none;
-  }
-}
-
-.main-header__item:last-child {
-  border-bottom: 1px solid @menu-line;
-
-  @media (min-width: @tablet-width) {
-    border: none;
+    min-width: 478px;
+    max-width: 591px;
+    margin-top: 16px;
   }
 }
 
@@ -113,10 +131,11 @@
   line-height: 20px;
 
   display: block;
-  padding: 22px 0 24px 0;
+  padding: 22px 10px 24px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  border-top: 1px solid @menu-line;
   color: @text-color_main;
   background-color: @button-text-color;
 
@@ -124,6 +143,11 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+
+    min-width: 64px;
+    max-width: 154px;
+    padding: 0;
+    border: none;
     background-color: inherit;
   }
 
@@ -131,6 +155,47 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
+
+    min-width: 71px;
+    max-width: 171px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.main-header__link--disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.main-header__item:nth-child(1n) .main-header__link {
+  @media (min-width: @tablet-width) {
+    margin-right: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 34px;
+  }
+}
+
+.main-header__item:nth-child(2n) .main-header__link {
+  @media (min-width: @tablet-width) {
+    margin-right: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 32px;
+  }
+}
+
+.main-header__item:nth-child(3n) .main-header__link {
+  border-bottom: 1px solid @menu-line;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    margin-right: 0;
   }
 }
 
@@ -140,23 +205,42 @@
   }
 }
 
-.main-header__link-index--active {
-  @media (min-width: @tablet-width) {
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-color: @button-bg-color;
-  }
+.main-header__link--active {
+  position: relative;
+}
 
-  @media (min-width: @desktop-width) {
-    text-decoration-color: @button-text-color;
+.main-header__link--active::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background-color: @button-bg-color;
   }
 }
 
-.main-header__link--active {
+.main-header__link-index--active {
+  position: relative;
+}
+
+.main-header__link-index--active::after {
   @media (min-width: @tablet-width) {
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-color: @button-bg-color;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background-color: @button-bg-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: -6px;
+    background-color: @text-bg-color;
   }
 }
 

@@ -1,6 +1,8 @@
 .expenses {
+  display: flex;
+  gap: 5px;
+
   @media (min-width: @tablet-width) {
-    display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 9px;
@@ -10,7 +12,7 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
-    gap: 63px;
+    gap: 66px;
   }
 }
 
@@ -19,4 +21,5 @@
   .font-submain;
   line-height: 20px;
   text-transform: uppercase;
+  max-width: 200px;
 }

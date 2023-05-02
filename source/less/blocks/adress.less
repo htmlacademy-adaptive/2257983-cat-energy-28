@@ -6,17 +6,18 @@
   background-color: @bg-color-main;
 
   @media (min-width: @tablet-width) {
-    padding: 60px 70px 56px;
+    padding: 56px 70px 56px;
   }
 
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
     width: 565px;
-    height: 198px;
-    padding: 56px 60px 56px 80px;
+    max-height: 300px;
+    padding: 47px 75px 56px 80px;
     position: absolute;
-    top: 95px;
+    top: 50%;
     left: 110px;
+    transform: translateY(-50%);
     background-color: @button-text-color;
   }
 }
@@ -27,15 +28,32 @@
 
 .adress__call {
   .font-submain;
-  width: 139px;
+  width: 135px;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
   text-transform: uppercase;
+  color: @adress-call-text-color;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 26px;
+
+    width: 171px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 1px 0;
+    overflow: hidden;
+  }
+}
+
+.adress__wrapper {
+  @media (min-width: @desktop-width) {
+    margin: 1px 0;
+    overflow: hidden;
   }
 }
 
@@ -53,5 +71,21 @@
 
   @media (min-width: @desktop-width) {
     text-align: left;
+
+    max-height: 140px;
+    margin: 1px 0;
+    overflow: hidden;
+  }
+}
+
+.adress__city {
+  @media (min-width: @tablet-width) {
+    padding-top: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-height: 140px;
+    margin: 1px 0;
+    overflow: hidden;
   }
 }
