@@ -32,6 +32,11 @@
 .social__item {
   list-style: none;
   display: inline-block;
+
+  &:focus-within {
+    outline: 2px solid #000000;
+    border-radius: 2px;
+  }
 }
 
 .social__link {
@@ -42,21 +47,15 @@
 
 .social__link--vk {
   .social-image-mask-setting();
-  mask: url("../img/social/vk.svg");
-  mask-position: center;
-  mask-repeat: no-repeat;
+  mask: url("../img/social/vk.svg") no-repeat center;
 }
 
 .social__link--youtube {
   .social-image-mask-setting();
-  mask: url("../img/social/youtube.svg");
-  mask-position: center;
-  mask-repeat: no-repeat;
+  mask: url("../img/social/youtube.svg") no-repeat center;
 }
 
 .social__link--telegram {
   .social-image-mask-setting();
-  mask: url("../img/social/telegram.svg");
-  mask-position: center;
-  mask-repeat: no-repeat;
+  mask: url("../img/social/telegram.svg") no-repeat center;
 }

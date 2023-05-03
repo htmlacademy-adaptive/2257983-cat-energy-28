@@ -42,7 +42,8 @@
   width: 4px;
   height: 256px;
   border-radius: 2px;
-  background-color: #666666;
+  color: var(--slider-color, #666666);
+  background-color: currentColor;
   z-index: 1;
   cursor: col-resize;
 
@@ -52,6 +53,14 @@
 
   @media (min-width: @tablet-width) {
     height: 512px;
+  }
+
+  &:hover {
+    --slider-color: #68b738;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -64,7 +73,8 @@
   box-sizing: border-box;
   width: 40px;
   height: 40px;
-  border: 2px solid #666666;
+  color: inherit;
+  border: 2px solid currentColor;
   border-radius: 50%;
   background-color: #ffffff;
   cursor: col-resize;
@@ -79,7 +89,7 @@
 
   border-style: solid;
   border-width: 9px 0 9px 8px;
-  border-color: transparent transparent transparent #666666;
+  border-color: transparent transparent transparent currentColor;
 }
 
 .cat__slider-button::after {
