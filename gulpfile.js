@@ -10,6 +10,7 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgmin from 'gulp-svgmin';
+import { stacksvg } from "gulp-stacksvg";
 import {deleteAsync} from 'del';
 
 // Styles
@@ -26,7 +27,6 @@ export const styles = () => {
   .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
   .pipe(browser.stream());
 }
-
 
 //HTML
 
@@ -75,12 +75,22 @@ const svg = () => {
   .pipe(gulp.dest('build/img'));
 }
 
+const svgsprite = () => {
+  return gulp.src('source/img/**/*.svg')
+  .pipe(svgmin())
+  .pipe(stacksvg({
+      output: 'sprite.svg'
+  }))
+  .pipe(gulp.dest('build/img/'));
+}
+
 //Copy
 
 const copy = (down) => {
   return gulp.src([
     'source/fonts/**/*.{woff,woff2}',
-    'source/*.ico'
+    'source/*.ico',
+    'source/*.webmanifest'
   ], {
     base: 'source'
   })
@@ -99,7 +109,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -127,6 +137,7 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
+    svgsprite,
     webp
   )
 )
@@ -142,6 +153,7 @@ export default gulp.series(
     html,
     scripts,
     svg,
+    svgsprite,
     webp
   ),
   gulp.series(

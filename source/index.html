@@ -4,10 +4,17 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width, initiale-scale=1">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="/img/favicon/152.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="/fonts/lato/Lato-Regular.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/oswald/oswaldmedium.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/oswald/oswaldregular.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
   </head>
 
   <body class="page__body page__body-index">
@@ -23,7 +30,7 @@
 
       <a class="main-header__logo-link-text" href="#">
         <svg class="main-header__text-logo" width="102" height="19" role="img" aria-label="Логотип Cat Energy">
-          <use href="/img/sprite.svg#logo-text"></use>
+          <use href="/img/sprite.svg#logo_logo-text"></use>
         </svg>
       </a>
 
@@ -53,6 +60,10 @@
 
         <div class="promo__wrapper">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="/img/index/promo-desktop.webp 1x, /img/index/promo-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 769px)" srcset="/img/index/promo-tablet.webp 1x, /img/index/promo-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="/img/index/promo-mobile.webp 1x, /img/index/promo-mobile@2x.webp 2x">
+
             <source media="(min-width: 1440px)" srcset="/img/index/promo-desktop.png 1x, /img/index/promo-desktop@2x.png 2x">
             <source media="(min-width: 769px)" srcset="/img/index/promo-tablet.png 1x, /img/index/promo-tablet@2x.png 2x">
             <img class="promo__image" src="/img/index/promo-mobile.png" srcset="/img/index/promo-mobile@2x.png 2x" alt="Баночка Cat Energy Курица" width="280" height="270">
@@ -129,8 +140,11 @@
 
           <div class="cat__before">
             <picture>
-              <source media="(min-width: 769px)" srcset="/img/index/cat-fat-tablet.png 1x, /img/index/cat-fat-tablet@2x.png 2x" width="560" height="512">
-              <img class="cat__before-img" src="/img/index/cat-fat-mobile.png" srcset="/img/index/cat-fat-mobile@2x.png 2x" alt="Полный кот Борис до" width="280" height="256">
+              <source loading="lazy" type="image/webp" media="(min-width: 769px)" srcset="/img/index/cat-fat-tablet.webp 1x, /img/index/cat-fat-tablet@2x.webp 2x" width="560" height="512">
+              <source loading="lazy" type="image/webp" srcset="/img/index/cat-fat-mobile.webp 1x, /img/index/cat-fat-mobile@2x.webp 2x" width="280" height="256">
+
+              <source loading="lazy" media="(min-width: 769px)" srcset="/img/index/cat-fat-tablet.png 1x, /img/index/cat-fat-tablet@2x.png 2x" width="560" height="512">
+              <img class="cat__before-img" loading="lazy" src="/img/index/cat-fat-mobile.png" srcset="/img/index/cat-fat-mobile@2x.png 2x" alt="Полный кот Борис до" width="280" height="256">
             </picture>
           </div>
 
@@ -142,8 +156,11 @@
 
           <div class="cat__after">
             <picture>
-              <source media="(min-width: 769px)" srcset="/img/index/cat-skinny-tablet.png 1x, /img/index/cat-skinny-tablet@2x.png 2x" width="560" height="512">
-              <img class="cat__after-img" src="/img/index/cat-skinny-mobile.png" srcset="/img/index/cat-skinny-mobile@2x.png 2x" alt="Худой кот Борис после" width="280" height="256">
+              <source loading="lazy" type="image/webp" media="(min-width: 769px)" srcset="/img/index/cat-skinny-tablet.webp 1x, /img/index/cat-skinny-tablet@2x.webp 2x" width="560" height="512">
+              <source loading="lazy" type="image/webp" srcset="/img/index/cat-skinny-mobile.webp 1x, /img/index/cat-skinny-mobile@2x.webp 2x" width="280" height="256">
+
+              <source loading="lazy" media="(min-width: 769px)" srcset="/img/index/cat-skinny-tablet.png 1x, /img/index/cat-skinny-tablet@2x.png 2x" width="560" height="512">
+              <img class="cat__after-img" loading="lazy" src="/img/index/cat-skinny-mobile.png" srcset="/img/index/cat-skinny-mobile@2x.png 2x" alt="Худой кот Борис после" width="280" height="256">
             </picture>
           </div>
 
@@ -171,7 +188,7 @@
       <div class="main-footer__bottom bottom">
         <a class="bottom__link" href="#">
           <svg class="bottom__link-img" width="143" height="24" role="img" aria-label="Логотип Cat Energy">
-            <use href="/img/sprite.svg#logo-text"></use>
+            <use href="/img/sprite.svg#logo_logo-text"></use>
           </svg>
         </a>
 
@@ -193,7 +210,7 @@
         <div class="bottom__copyright copyright">
           <a class="copyright__link" href="#" aria-label="Сайт разработчика">HTML Academy
             <svg class="copyright__link-img" width="27" height="34" role="img">
-              <use href="/img/sprite.svg#logo-html"></use>
+              <use href="/img/sprite.svg#logo_logo-html"></use>
             </svg>
           </a>
         </div>

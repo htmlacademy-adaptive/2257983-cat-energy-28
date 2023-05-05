@@ -68,6 +68,10 @@
 @media (min-width: @tablet-width) {
   .job__step-one {
     width: 230px;
+
+    @media (min-width: @desktop-width) {
+      width: 246px;
+    }
   }
 
   .job__step-two {
@@ -106,6 +110,7 @@
 .job__step-one::after {
   @media (min-width: @tablet-width) {
     .job-number();
+    right: 22px;
     content: "1";
   }
 }
