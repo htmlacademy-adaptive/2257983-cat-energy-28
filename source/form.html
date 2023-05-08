@@ -45,7 +45,7 @@
             <a class="main-header__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-header__item">
-            <a class="main-header__link  main-header__link--active" href="#">Подбор программы</a>
+            <a class="main-header__link main-header__link--active" href="">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -132,28 +132,28 @@
                 <li class="additional__item">
                   <label class="additional__label" for="sweetener">
                     <input class="visually-hidden additional__input" id="sweetener" name="additional" value="sweetener" type="checkbox" checked>
-                    <span class="control-mark-check"></span>
+                    <span class="additional__control-mark-check"></span>
                     Сахарозаменитель
                   </label>
                 </li>
                 <li class="additional__item">
                   <label class="additional__label" for="water">
                     <input class="visually-hidden additional__input" id="water" name="additional" value="water" type="checkbox">
-                    <span class="control-mark-check"></span>
+                    <span class="additional__control-mark-check"></span>
                     Питьевая вода
                   </label>
                 </li>
                 <li class="additional__item">
                   <label class="additional__label" for="milk">
                     <input class="visually-hidden additional__input" id="milk" name="additional" value="milk" type="checkbox">
-                    <span class="control-mark-check"></span>
+                    <span class="additional__control-mark-check"></span>
                     Молоко
                   </label>
                 </li>
                 <li class="additional__item">
                   <label class="additional__label" for="vitamins">
                     <input class="visually-hidden additional__input" id="vitamins" name="additional" value="vitamins" type="checkbox">
-                    <span class="control-mark-check"></span>
+                    <span class="additional__control-mark-check"></span>
                     Витамины
                   </label>
                 </li>
@@ -179,8 +179,21 @@
           </div>
         </div>
 
-        <div class="location__map map">
-          <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.609424611785!2d30.32097973974636!3d59.938622944914385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682005257359!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="location__map map map--no-js">
+          <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.609424611785!2d30.32097973974636!3d59.938622944914385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682005257359!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <div class="map__wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x" width="1440" height="400">
+              <source type="image/webp" media="(min-width: 769px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x" width="768" height="400">
+              <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x" width="320" height="362">
+
+              <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x" width="1440" height="400">
+              <source media="(min-width: 769px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x" width="768" height="400">
+              <img class="map__img" loading="lazy" src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x" alt="Местоположение магазина Cat Energy" width="320" height="362">
+            </picture>
+          </div>
         </div>
       </div>
 
@@ -207,7 +220,7 @@
         </div>
 
         <div class="bottom__copyright copyright">
-          <a class="copyright__link" href="#" aria-label="Сайт разработчика">HTML Academy
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт разработчика">HTML Academy
             <svg class="copyright__link-img" width="27" height="34" role="img">
               <use href="/img/sprite.svg#logo_logo-html"></use>
             </svg>
