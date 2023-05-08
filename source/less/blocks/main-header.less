@@ -98,7 +98,15 @@
   transform: rotate(-45deg);
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-header__nav--closed .main-header__list {
+    display: none;
 
+    &--opened {
+      display: block;
+    }
+  }
+}
 /*Конец бургер-меню*/
 
 .main-header__list {
@@ -250,15 +258,7 @@
 
 /*Без JS начало*/
 
-@media (max-width: @tablet-width) {
-  .main-header__nav--closed .main-header__list {
-    display: none;
-
-    &--opened {
-      display: block;
-    }
-  }
-
+@media (max-width: @mobile-width-only) {
   .main-header__nav--nojs .main-header__list {
     position: inherit;
     display: block;
