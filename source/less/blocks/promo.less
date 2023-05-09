@@ -12,7 +12,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: inherit;
+    position: static;
     min-height: 552px;
     padding: 29px 110px 0;
   }
@@ -22,6 +22,7 @@
   content: "";
   position: absolute;
   top: 0;
+  left: center;
 
   width: 320px;
   height: 302px;
@@ -40,16 +41,16 @@
   @media (min-width: @desktop-width) {
     right: 0;
 
-    width: 720px;
+    width: 50%;
     height: 694px;
     background-image: url("../img/index/cat-bg-desktop.jpg");
-    background-size: 720px 694px;
-    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 1044px 694px;
     z-index: -2;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index/cat-bg-desktop@2x.jpg");
-      background-size: 720px 694px;
+      background-size: 1044px 694px;
     }
   }
 }
@@ -58,6 +59,7 @@
   content: "";
   position: absolute;
   top: 0;
+  left: center;
 
   width: 100%;
   height: 302px;
@@ -73,7 +75,7 @@
     right: 0;
 
     background-color: @bg-image-color;
-    width: 720px;
+    width: 50%;
     height: 694px;
     z-index: -2;
   }
@@ -173,7 +175,7 @@
 
     position: absolute;
     top: 0;
-    left: 448px;
+    left: 36.7%;
     transform: none;
   }
 }
