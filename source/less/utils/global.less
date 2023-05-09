@@ -25,7 +25,8 @@
   font-display: swap;
 }
 
-@tablet-width: 769px;
+@mobile-width-only: 767.98px;
+@tablet-width: 768px;
 @desktop-width: 1440px;
 
 .page {
@@ -38,13 +39,12 @@
   line-height: 18px;
   margin: 0 auto;
   height: 100%;
-  position: relative;
 
   display: flex;
   flex-direction: column;
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
+    max-width: 2088px;
   }
 }
 

@@ -15,6 +15,7 @@
   margin: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
 
@@ -24,6 +25,7 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    justify-content: center;
     gap: 80px;
   }
 }
@@ -44,7 +46,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    width: 570px;
+    width: 569px;
     min-height: 374px;
     padding: 77px 61px 55px 52px;
   }

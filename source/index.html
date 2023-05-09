@@ -23,7 +23,7 @@
       <a class="main-header__logo-link" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="/img/logo/logo-desktop.svg" width="202" height="59">
-          <source media="(min-width: 769px)" srcset="/img/logo/logo-tablet.svg" width="174" height="52">
+          <source media="(min-width: 768px)" srcset="/img/logo/logo-tablet.svg" width="174" height="52">
           <img class="main-header__hero-logo" src="/img/logo/logo-mobile.svg" alt="Логотип Cat Energy" width="34" height="38">
         </picture>
       </a>
@@ -55,17 +55,17 @@
     <main class="main-container">
 
       <section class="promo">
-        <h1 class="promo__title">Функциональное питание для котов</h1>
-        <p class="promo__description">Занялся собой? Займись котом!</p>
 
-        <div class="promo__wrapper">
+        <div class="promo__content">
+          <h1 class="promo__title">Функциональное питание для котов</h1>
+          <p class="promo__description">Занялся собой? Займись котом!</p>
           <picture>
             <source type="image/webp" media="(min-width: 1440px)" srcset="/img/index/promo-desktop.webp 1x, /img/index/promo-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 769px)" srcset="/img/index/promo-tablet.webp 1x, /img/index/promo-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="/img/index/promo-tablet.webp 1x, /img/index/promo-tablet@2x.webp 2x">
             <source type="image/webp" srcset="/img/index/promo-mobile.webp 1x, /img/index/promo-mobile@2x.webp 2x">
 
             <source media="(min-width: 1440px)" srcset="/img/index/promo-desktop.png 1x, /img/index/promo-desktop@2x.png 2x">
-            <source media="(min-width: 769px)" srcset="/img/index/promo-tablet.png 1x, /img/index/promo-tablet@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="/img/index/promo-tablet.png 1x, /img/index/promo-tablet@2x.png 2x">
             <img class="promo__image" src="/img/index/promo-mobile.png" srcset="/img/index/promo-mobile@2x.png 2x" alt="Баночка Cat Energy Курица" width="280" height="270">
           </picture>
           <a class="promo__button" href="form.html">Подобрать программу</a>
@@ -136,35 +136,31 @@
         </div>
 
         <div class="cat">
-
-
           <div class="cat__before">
             <picture>
-              <source loading="lazy" type="image/webp" media="(min-width: 769px)" srcset="/img/index/cat-fat-tablet.webp 1x, /img/index/cat-fat-tablet@2x.webp 2x" width="560" height="512">
-              <source loading="lazy" type="image/webp" srcset="/img/index/cat-fat-mobile.webp 1x, /img/index/cat-fat-mobile@2x.webp 2x" width="280" height="256">
+              <source type="image/webp" media="(min-width: 768px)" srcset="/img/index/cat-fat-tablet.webp 1x, /img/index/cat-fat-tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="/img/index/cat-fat-mobile.webp 1x, /img/index/cat-fat-mobile@2x.webp 2x" width="280" height="256">
 
-              <source loading="lazy" media="(min-width: 769px)" srcset="/img/index/cat-fat-tablet.png 1x, /img/index/cat-fat-tablet@2x.png 2x" width="560" height="512">
+              <source media="(min-width: 768px)" srcset="/img/index/cat-fat-tablet.png 1x, /img/index/cat-fat-tablet@2x.png 2x" width="560" height="512">
               <img class="cat__before-img" loading="lazy" src="/img/index/cat-fat-mobile.png" srcset="/img/index/cat-fat-mobile@2x.png 2x" alt="Полный кот Борис до" width="280" height="256">
             </picture>
           </div>
 
           <div class="cat__slider">
-            <button class="cat__slider-button" aria-label="Слайдер">
+            <button class="cat__slider-button" type="button" aria-label="Слайдер">
               <span class="visually-hidden">Ползунок слайдера</span>
             </button>
           </div>
 
           <div class="cat__after">
             <picture>
-              <source loading="lazy" type="image/webp" media="(min-width: 769px)" srcset="/img/index/cat-skinny-tablet.webp 1x, /img/index/cat-skinny-tablet@2x.webp 2x" width="560" height="512">
-              <source loading="lazy" type="image/webp" srcset="/img/index/cat-skinny-mobile.webp 1x, /img/index/cat-skinny-mobile@2x.webp 2x" width="280" height="256">
+              <source type="image/webp" media="(min-width: 768px)" srcset="/img/index/cat-skinny-tablet.webp 1x, /img/index/cat-skinny-tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="/img/index/cat-skinny-mobile.webp 1x, /img/index/cat-skinny-mobile@2x.webp 2x" width="280" height="256">
 
-              <source loading="lazy" media="(min-width: 769px)" srcset="/img/index/cat-skinny-tablet.png 1x, /img/index/cat-skinny-tablet@2x.png 2x" width="560" height="512">
+              <source media="(min-width: 768px)" srcset="/img/index/cat-skinny-tablet.png 1x, /img/index/cat-skinny-tablet@2x.png 2x" width="560" height="512">
               <img class="cat__after-img" loading="lazy" src="/img/index/cat-skinny-mobile.png" srcset="/img/index/cat-skinny-mobile@2x.png 2x" alt="Худой кот Борис после" width="280" height="256">
             </picture>
           </div>
-
-
         </div>
       </section>
     </main>
@@ -180,8 +176,21 @@
           </div>
         </div>
 
-        <div class="location__map map">
-          <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.609424611785!2d30.32097973974636!3d59.938622944914385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682005257359!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="location__map map map--no-js">
+          <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.609424611785!2d30.32097973974636!3d59.938622944914385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682005257359!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <div class="map__wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x" width="1440" height="400">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x" width="768" height="400">
+              <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x" width="320" height="362">
+
+              <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x" width="1440" height="400">
+              <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x" width="768" height="400">
+              <img class="map__img" loading="lazy" src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x" alt="Местоположение магазина Cat Energy" width="320" height="362">
+            </picture>
+          </div>
         </div>
       </div>
 
@@ -208,7 +217,7 @@
         </div>
 
         <div class="bottom__copyright copyright">
-          <a class="copyright__link" href="#" aria-label="Сайт разработчика">HTML Academy
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт разработчика">HTML Academy
             <svg class="copyright__link-img" width="27" height="34" role="img">
               <use href="/img/sprite.svg#logo_logo-html"></use>
             </svg>
