@@ -8,7 +8,7 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 896px 245px;
+    grid-template-columns: minmax(896px, 1544px) 245px;
     column-gap: 79px;
     padding: 0 110px 86px;
   }
@@ -51,7 +51,7 @@
 
   @media (min-width: @desktop-width) {
     left: 110px;
-    width: 1330px;
+    width: calc(100% - 110px);
   }
 }
 
@@ -109,6 +109,7 @@
   @media (min-width: @desktop-width) {
     display: flex;
     padding: 15px 0 16px;
+    column-gap: 33px;
   }
 }
 
@@ -133,7 +134,7 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 271px 189px 51px;
+    grid-template-columns: minmax(271px, 450px) minmax(189px, 450px) 51px;
     column-gap: 54px;
     align-content: center;
     margin: 0;

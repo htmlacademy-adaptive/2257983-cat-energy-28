@@ -10,11 +10,14 @@
     min-width: 708px;
     margin: 0;
     padding: 0 30px;
+
     align-items: flex-start;
+    gap: 94px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 53px 110px 0;
+    gap: 120px;
   }
 }
 
@@ -121,17 +124,16 @@
 
   @media (min-width: @tablet-width) {
     min-width: 440px;
-    max-width: 532px;
     position: static;
     margin-top: 18px;
 
     display: flex;
     flex-wrap: wrap;
+    row-gap: 6px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 478px;
-    max-width: 591px;
     margin-top: 16px;
   }
 }
